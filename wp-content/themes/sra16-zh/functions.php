@@ -21,3 +21,16 @@ function sra_theme_support() {
     add_theme_support( 'post-thumbnails' );
 }
 add_action( 'after_setup_theme', 'sra_theme_support' );
+
+
+/* Element Shortcode */
+function sra_element_shortcode($atts) {
+    $atts = shortcode_atts( array(
+        "elem" => "",
+    ), $atts, "sra-element" );
+    ob_start();
+    get_template_part("templates/elements/{$atts['elem']}");
+    return ob_get_clean();
+}
+
+add_shortcode('sra-element', 'sra_element_shortcode');

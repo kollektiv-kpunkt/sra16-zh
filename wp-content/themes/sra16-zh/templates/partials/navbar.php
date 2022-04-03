@@ -1,6 +1,6 @@
 <div class="navBarWrapper">
     <div class="largeContainer">
-        <div id="navbar-inner" class="flex justify-between my-2">
+        <div id="navbar-inner" class="flex justify-between py-2">
             <div id="logo-container">
                 <a href="/" class="block">
                     <?php

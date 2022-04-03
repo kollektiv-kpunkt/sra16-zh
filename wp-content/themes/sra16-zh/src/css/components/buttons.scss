@@ -32,6 +32,12 @@
     --textcolor: var(--color10);
 }
 
+.sra-button.sra-button-ter {
+    --bordercolor: var(--backgroundcolor);
+    --backgroundcolor: var(--color10);
+    --textcolor: var(--color30);
+}
+
 .sra-button.sra-button-line {
     --bordercolor: var(--backgroundcolor);
     background-color: transparent;

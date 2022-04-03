@@ -1,0 +1,30 @@
+.imgDividerWrapper {
+    background: linear-gradient(180deg, white 1rem, var(--color10) 1rem, var(--color10) calc(100% - 1rem), white calc(100% - 1rem));;
+}
+
+.img-divider-container {
+    width: calc(21cm * 1.2);
+    max-width: calc(100vw - 1rem);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-divider-inner {
+    position: relative;
+    padding-bottom: calc(100% / 16 * 9);
+    box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.25);
+}
+
+.img-divider-inner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imgDividerWrapper .my-20 {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
