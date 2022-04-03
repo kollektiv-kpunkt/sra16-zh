@@ -35,6 +35,7 @@
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+    transition: opacity 0.5s ease;
 }
 
 #heroine-hash-container {
@@ -54,6 +55,10 @@
     left: 0;
     width: 100%;
     height: 100%;
+}
+#heroine-hash-container #heroine-hash-inner svg path {
+    fill: var(--color60);
+    transition: 0.5s ease fill;
 }
 
 #heroine-img-container {
@@ -94,6 +99,7 @@
     height: 100%;
     object-fit: cover;
     object-position: top right;
+    transition: opacity 0.5s ease;
 }
 
 @media screen and (max-width: 1080px) {
@@ -135,12 +141,14 @@
     padding: calc(1em / 15) calc(1em / 15) 0 calc(1em / 15);
     font-weight: 900;
     background-color: var(--color30);
+    transition: 0.5s ease background-color;
 }
 
 .heroine-content-title h1 {
     font-size: 5.5vw;
     color: var(--color10);
     margin-bottom: 0.15em;
+    transition: 0.5s ease color;
 }
 
 #heroine-content-title-container p {

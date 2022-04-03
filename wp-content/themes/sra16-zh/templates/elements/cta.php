@@ -5,13 +5,13 @@
                 <div class="cta-img-wrapper">
                     <img src="<?= get_template_directory_uri()?>/public/cta.jpg" alt="" class="cta-img">
                     <div class="cta-img-gradient"></div>
-                    <div class="cta-img-content">
+                    <div class="cta-img-content scrollAnimation" data-delay="750"">
                         <h2 class="text-5xl">Wir sind bereit.</h2>
                         <h2 class="text-5xl">Du auch?</h2>
                     </div>
                 </div>
             </div>
-            <div class="cta-action-container py-12 my-auto">
+            <div class="cta-action-container py-12 my-auto scrollAnimation" data-delay="750"">
                 <div class="cta-action-inner text-white">
                     <h1 class="text-5xl mb-4 text-white">Unterstütze uns!</h1>
                     <p class="text-2xl">Quam sit nec sit sagittis, tortor, luctus diam arcu. Neque eget viverra pulvinar dolor quam aliquet eu. Eu nunc libero elit tellus fermentum elementum.</p>
