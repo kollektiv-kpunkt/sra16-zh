@@ -1,0 +1,70 @@
+.sra-button {
+    padding: 0.5em 1em 0.45em 1em;
+    border: 0.2em var(--bordercolor) solid;
+    letter-spacing: 0.05em;
+    display: block;
+    background-color: var(--backgroundcolor);
+    color: var(--textcolor);
+    font-weight: 900;
+    box-sizing: border-box;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 0.8;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+
+    --bordercolor: var(--backgroundcolor);
+    --backgroundcolor: var(--color30);
+    --textcolor: var(--color10);
+
+    transition: 0.125s ease filter, 0.125s ease opacity;
+}
+
+.sra-button:hover {
+    -webkit-filter: brightness(1.15);
+    filter: brightness(1.15);
+}
+
+.sra-button.sra-button-sec {
+    --bordercolor: var(--backgroundcolor);
+    --backgroundcolor: var(--color60);
+    --textcolor: var(--color10);
+}
+
+.sra-button.sra-button-line {
+    --bordercolor: var(--backgroundcolor);
+    background-color: transparent;
+    --textcolor: var(--backgroundcolor);
+}
+
+.sra-button.sra-button-neg:hover,
+.sra-button.sra-button-line:hover,
+.sra-button.sra-button-black:hover {
+    opacity: 0.8;
+}
+
+.sra-button.sra-button-arrow::after {
+    content: "\203a";
+    font-size: 1.5em;
+    line-height: 0;
+    margin-left: 0.15em;
+    display: inline-block;
+    transition: 0.125s ease transform;
+}
+
+.sra-button.sra-button-arrow:hover::after {
+    transform: translateX(0.15em);
+}
+
+.sra-button.sra-button-arrowdown::after {
+    content: "↓";
+    line-height: 0;
+    margin-left: 0.35em;
+    display: inline-block;
+    transition: 0.125s ease transform;
+}
+
+.sra-button.sra-button-arrowdown:hover::after {
+    transform: translateY(0.15em);
+}
