@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<?= get_language_attributes() ?>">
+<html <?= get_language_attributes() ?>>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
