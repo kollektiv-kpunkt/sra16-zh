@@ -161,7 +161,8 @@
 
 @media screen and (max-width: 580px) {
     #heroine-img-container {
-        height: 70vh;
+        height: 66vh;
         margin-top: 10vh;
+        min-height: unset;
     }
 }
