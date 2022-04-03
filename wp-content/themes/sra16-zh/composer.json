@@ -1,0 +1,21 @@
+{
+    "name": "kollektiv-kpunkt/sra16-zh",
+  "description": "Webpage for the cantonal campaign for the loweing of the voting age to 16 in the canton of Zurich. sra16-zh.ch",
+  "type":"wordpress-theme",
+  "minimum-stability" : "stable",
+  "authors": [
+    {
+      "email": "timothy@kpunkt.ch",
+      "name": "timothyoesch"
+    }
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "5.7.16|6.*"
+  },
+    "require": {
+        "vlucas/phpdotenv": "^5.4",
+        "pecee/simple-router": "4.3.7.2",
+        "mailchimp/marketing": "^3.0",
+        "matomo/matomo-php-tracker": "^3.0"
+    }
+}
