@@ -1,10 +1,10 @@
 #heroine-inner {
-    height: 85vh;
     position: relative;
     display: flex;
+    overflow: hidden;
 }
 
-#heroine-bg-container, #heroine-hash-container, #heroine-vignette-container, #heroine-img-container, #heroine-content-container {
+#heroine-bg-container, #heroine-hash-container, #heroine-vignette-container, #heroine-content-container {
     position: absolute;
     top: 0;
     left: 0;
@@ -58,14 +58,32 @@
 
 #heroine-img-container {
     z-index: 4;
+    display: flex;
+    height: 85vh;
+    min-height: 650px;
+    width: 100%;
+}
+
+#heroine-img-wrapper {
+    width: 94vh;
+    min-width: 929px;
+    max-width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: 10%;
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 1580px) {
+    #heroine-img-wrapper {
+        margin-right: 2rem;
+    }
 }
 
 #heroine-img-inner {
     position: relative;
-    width: 50%;
     height: 100%;
-    margin-right: 22.5%;
-    margin-left: auto;
 }
 
 #heroine-img-inner img {
@@ -74,8 +92,21 @@
     left: 0;
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
+    object-position: top right;
+}
+
+@media screen and (max-width: 980px) {
+    #heroine-img-wrapper {
+        margin-right: 0;
+        min-width: unset;
+        max-width: unset;
+        width: 100%;
+    }
+
+    #heroine-img-inner img {
+        object-position: top center;
+    }
 }
 
 #heroine-content-container {
@@ -83,11 +114,20 @@
 }
 
 #heroine-content-inner {
-    width: 40%;
+    width: 45%;
 }
 
+@media screen and (max-width: 1280px) {
+    #heroine-content-container .largeContainer {
+        margin-top: auto;
+        margin-bottom: 3rem;
+    }
+}
+
+
+
 .heroine-content-title {
-    font-size: 6rem;
+    font-size: 5.5vw;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -97,4 +137,31 @@
     color: var(--color10);
     background-color: var(--color30);
     margin-bottom: 0.15em;
+}
+
+#heroine-content-title-container p {
+    text-shadow: 0.15em 0.15em 0.5em rgba(0, 0, 0, 0.534);
+}
+
+@media screen and (max-width: 980px) {
+    #heroine-content-inner {
+        width: 100%;
+    }
+
+    .heroine-content-title {
+        font-size: 8vw;
+    }
+
+    #heroine-content-title-container p {
+        font-size: 1.25rem;
+        line-height: 1.3;
+    }
+}
+
+
+@media screen and (max-width: 580px) {
+    #heroine-img-container {
+        height: 70vh;
+        margin-top: 10vh;
+    }
 }

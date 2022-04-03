@@ -12,8 +12,10 @@
 
         </div>
         <div id="heroine-img-container">
-            <div id="heroine-img-inner">
-                <img src="<?= get_template_directory_uri() ?>/public/heroines/florine_heroine.png">
+            <div id="heroine-img-wrapper">
+                <div id="heroine-img-inner">
+                    <img src="<?= get_template_directory_uri() ?>/public/heroines/florine_heroine.png">
+                </div>
             </div>
         </div>
         <div id="heroine-content-container" class="flex flex-col justify-center">
