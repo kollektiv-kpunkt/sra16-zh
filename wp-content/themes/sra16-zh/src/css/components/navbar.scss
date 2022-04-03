@@ -5,3 +5,46 @@
     width: 100%;
     z-index: 1000;
 }
+
+#navbar-menu-mobile-container {
+    display: none;
+}
+
+/* Mobile styles */
+@media (max-width: 980px) {
+    .navBarWrapper {
+        position: -webkit-sticky;
+        position: sticky;
+    }
+
+    #navbar-inner svg {
+        height: 4rem;
+        width: fit-content;
+    }
+
+    #navbar-menu-desktop-content {
+        display: none;
+    }
+
+    #navbar-menu-mobile-container {
+        display: block;
+    }
+
+    #mobile-menu-button span {
+        font-family: "klima";
+        text-transform: uppercase;
+        transform: translateY(2px);
+        color: var(--color60);
+        font-weight: 900;
+    }
+
+    #mobile-menu-button #tofu-burger {
+        row-gap: 2px;
+    }
+
+    #mobile-menu-button #tofu-burger div {
+        width: 1rem;
+        height: 2px;
+        background-color: var(--color30);
+    }
+}

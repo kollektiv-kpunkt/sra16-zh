@@ -14,6 +14,20 @@
                     get_template_part( "templates/partials/navbar-menu-content" );
                     ?>
                 </div>
+                <div id="navbar-menu-mobile-container" class="my-auto">
+                    <div id="menu-mobile-inner" class="flex">
+                        <div id="mobile-menu-button" class="flex gap-2">
+                            <span class="my-auto text-xl">
+                                Menu
+                            </span>
+                            <div id="tofu-burger" class="flex flex-col justify-center">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

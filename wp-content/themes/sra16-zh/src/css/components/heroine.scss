@@ -96,7 +96,7 @@
     object-position: top right;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1080px) {
     #heroine-img-wrapper {
         margin-right: 0;
         min-width: unset;
@@ -168,7 +168,7 @@
 @media screen and (max-width: 580px) {
     #heroine-img-container {
         height: 66vh;
-        margin-top: 8vh;
+        margin-top: 2vh;
         min-height: unset;
     }
 }
