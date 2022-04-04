@@ -1,7 +1,9 @@
 <div class="HeroineWrapper">
     <div id="heroine-inner">
         <div id="heroine-bg-container">
-            <img src="<?= get_template_directory_uri() ?>/public/heroines/florine_bg.jpg">
+            <img src="<?= get_template_directory_uri() ?>/public/heroines/florine_bg.jpg" class="heroine-active" data-heroine-person="florine">
+            <img src="<?= get_template_directory_uri() ?>/public/heroines/amelie_bg.jpg" data-heroine-person="amelie">
+            <img src="<?= get_template_directory_uri() ?>/public/heroines/nicolo_bg.jpg" data-heroine-person="nicolo">
         </div>
         <div id="heroine-hash-container">
             <?php
@@ -14,7 +16,9 @@
         <div id="heroine-img-container">
             <div id="heroine-img-wrapper">
                 <div id="heroine-img-inner">
-                    <img src="<?= get_template_directory_uri() ?>/public/heroines/florine_heroine.png">
+                    <img src="<?= get_template_directory_uri() ?>/public/heroines/florine_heroine.png" class="heroine-active" data-heroine-person="florine">
+                    <img src="<?= get_template_directory_uri() ?>/public/heroines/amelie_heroine.png" data-heroine-person="amelie">
+                    <img src="<?= get_template_directory_uri() ?>/public/heroines/nicolo_heroine.png" data-heroine-person="nicolo">
                 </div>
             </div>
         </div>

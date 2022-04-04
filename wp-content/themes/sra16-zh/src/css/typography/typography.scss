@@ -75,6 +75,10 @@ h1 {
     color: var(--color30);
 }
 
+body.ds-2 h1, body.ds-4 h1 {
+    color: var(--color10);
+}
+
 
 small,
 .text_small {

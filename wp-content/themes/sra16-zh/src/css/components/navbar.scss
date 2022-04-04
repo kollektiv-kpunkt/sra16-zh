@@ -48,3 +48,19 @@
         background-color: var(--color30);
     }
 }
+
+#logo-container svg #logo-sixteen path,
+#logo-container svg #logo-border path {
+    fill: var(--color30);
+    transition: 0.5s ease fill;
+}
+
+#logo-container svg #logo-box {
+    fill: var(--color60);
+    transition: 0.5s ease fill;
+}
+
+#logo-container svg #logo-text path {
+    fill: var(--color10);
+    transition: 0.5s ease fill;
+}
