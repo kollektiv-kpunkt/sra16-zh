@@ -32,6 +32,7 @@ function sendKomitee(e) {
     } else {
       alertBar.classList.add(content.status);
       alertBar.style.display = "block";
+      alertBar.innerText = content.message;
     }
   })();
 }

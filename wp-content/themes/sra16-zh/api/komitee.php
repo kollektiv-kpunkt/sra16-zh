@@ -8,7 +8,7 @@ if($json = json_decode(file_get_contents("php://input"), true)) {
 global $wpdb;
 
 if ($wpdb->query($wpdb->prepare("SELECT * from `wp_supporters` WHERE `email` = %s", array($data["email"]))) != 0) {
-    echo json_encode(array("status" => "error", "message" => "Diese E-Mail Adresse ist bereits registriert."));
+    echo json_encode(array("status" => "error", "message" => "Diese E-Mail Adresse wurde bereits verwendet!"));
     exit;
 }
 
