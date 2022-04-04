@@ -1,5 +1,5 @@
 <?php
-$supporters = $wpdb->get_results("SELECT * from `wp_supporters` WHERE `status` = 1", ARRAY_A);
+$supporters = $wpdb->get_results("SELECT * from `wp_supporters` WHERE `status` = 1 ORDER BY `fname` ASC", ARRAY_A);
 ?>
 
 <div class="komitee-wrapper">
