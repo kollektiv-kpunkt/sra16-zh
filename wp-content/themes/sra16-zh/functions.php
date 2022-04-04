@@ -1,6 +1,10 @@
 <?php
 require_once(__DIR__ . "/vendor/autoload.php");
 
+
+$db = new pdo("sqlite:" . __DIR__ . "/db/sra16-zh.db");
+global $db;
+
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->safeLoad();
 

@@ -36,7 +36,9 @@ function heroineSlider() {
   }, 500);
 }
 
-setInterval(() => {
-  heroineSlider();
-  i++;
-}, 7000);
+if (document.getElementById("heroine-bg-container")) {
+  setInterval(() => {
+    heroineSlider();
+    i++;
+  }, 7000);
+}
