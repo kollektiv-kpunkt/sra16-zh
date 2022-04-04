@@ -1,4 +1,4 @@
-const people = ["florine", "amelie", "nicolo"];
+const people = ["florine", "amelie", "nicolo", "daria", "chiara"];
 
 let i = 0;
 let wrap = 0;

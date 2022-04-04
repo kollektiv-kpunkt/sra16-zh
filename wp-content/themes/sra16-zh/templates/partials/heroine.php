@@ -4,6 +4,8 @@
             <img src="<?= get_template_directory_uri() ?>/public/heroines/florine_bg.jpg" class="heroine-active" data-heroine-person="florine">
             <img src="<?= get_template_directory_uri() ?>/public/heroines/amelie_bg.jpg" data-heroine-person="amelie">
             <img src="<?= get_template_directory_uri() ?>/public/heroines/nicolo_bg.jpg" data-heroine-person="nicolo">
+            <img src="<?= get_template_directory_uri() ?>/public/heroines/daria_bg.jpg" data-heroine-person="daria">
+            <img src="<?= get_template_directory_uri() ?>/public/heroines/chiara_bg.jpg" data-heroine-person="chiara">
         </div>
         <div id="heroine-hash-container">
             <?php
@@ -19,6 +21,8 @@
                     <img src="<?= get_template_directory_uri() ?>/public/heroines/florine_heroine.png" class="heroine-active" data-heroine-person="florine">
                     <img src="<?= get_template_directory_uri() ?>/public/heroines/amelie_heroine.png" data-heroine-person="amelie">
                     <img src="<?= get_template_directory_uri() ?>/public/heroines/nicolo_heroine.png" data-heroine-person="nicolo">
+                    <img src="<?= get_template_directory_uri() ?>/public/heroines/daria_heroine.png" data-heroine-person="daria">
+                    <img src="<?= get_template_directory_uri() ?>/public/heroines/chiara_heroine.png" data-heroine-person="chiara">
                 </div>
             </div>
         </div>

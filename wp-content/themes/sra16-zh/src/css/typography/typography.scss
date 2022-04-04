@@ -73,6 +73,7 @@ h1,h2,h3,h4,h5 {
 h1 {
     font-weight: 900;
     color: var(--color30);
+    transition: 0.5s ease color;
 }
 
 body.ds-2 h1, body.ds-4 h1 {

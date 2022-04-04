@@ -34,7 +34,7 @@
                     Zurlindenstrasse 134<br>
                     8003 Zürich<br>
                     Betreff: Stimmrechtsalter 16</p>
-                    <p><a href="/spenden" class="underline">Online Spenden</a>
+                    <!-- <p><a href="/spenden" class="underline">Online Spenden</a></p> -->
                 </div>
             </div>
         </div>

@@ -64,3 +64,151 @@
     fill: var(--color10);
     transition: 0.5s ease fill;
 }
+
+
+.navBarWrapper .scrollbar {
+    background-color: transparent;
+    transition: 0.25s ease background-color, 0.25s ease transform;
+}
+
+@media screen and (max-width: 980px) {
+    .navBarWrapper .scrollbar {
+        background-color: white;
+    }
+}
+
+.navBarWrapper .scrollbar.scroll {
+    background-color: white;
+}
+
+.navBarWrapper .scrollbar svg {
+    transition: 0.5s ease height;
+    width: auto;
+}
+
+.navBarWrapper .scrollbar.scroll svg {
+    height: 2.5rem;
+}
+
+.navBarWrapper .scrollbar.scroll ul li a:not(.sra-button) {
+    color: black;
+}
+
+.navBarWrapper .scrollbar.hidescroll {
+    transform: translateY(-100%);
+}
+
+
+#navbar-menu-mobile-content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    background-color: white;
+    transition: 0.5s ease transform, 0.5s ease opacity, 0.5s ease visibility;
+}
+
+#navbar-menu-mobile-content.open {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+#navbar-menu-mobile-content .navbar-items {
+    flex-direction: column;
+    text-align: end;
+    gap: 0.75rem;
+    padding: 1.5rem;
+    padding-top: 6rem;
+}
+
+#navbar-menu-mobile-content .navbar-items li a:not(.sra-button) {
+    font-size: 1.5rem;
+    ;
+    filter: none;
+    color: black;
+}
+
+#navbar-menu-mobile-content .navbar-item.buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#navbar-menu-mobile-content .navbar-item.buttons .sra-button {
+    width: 100%;
+}
+
+
+/* STATES */
+
+.navBarWrapper .scrollbar.menu-open {
+    transform: translateY(0);
+}
+
+.scrollbar.menu-open #mobile-menu-button #tofu-burger div:nth-child(2) {
+    opacity: 0;
+}
+
+.scrollbar #mobile-menu-button #tofu-burger div:nth-child(1) {
+    --state1: translateY(0) rotate(0);
+    --state2: translateY(4px) rotate(0);
+    --state3: translateY(4px) rotate(45deg);
+}
+
+.scrollbar.menu-open #mobile-menu-button #tofu-burger div:nth-child(1) {
+    animation: tofuBurgerOpen 0.5s ease forwards;
+}
+
+.scrollbar.menu-close #mobile-menu-button #tofu-burger div:nth-child(1) {
+    animation: tofuBurgerClose 0.5s ease forwards;
+}
+
+.scrollbar #mobile-menu-button #tofu-burger div:nth-child(3) {
+    --state1: translateY(0) rotate(0);
+    --state2: translateY(-4px) rotate(0);
+    --state3: translateY(-4px) rotate(-45deg);
+}
+
+.scrollbar.menu-open #mobile-menu-button #tofu-burger div:nth-child(3) {
+    animation: tofuBurgerOpen 0.5s ease forwards;
+}
+
+.scrollbar.menu-close #mobile-menu-button #tofu-burger div:nth-child(3) {
+    animation: tofuBurgerClose 0.5s ease forwards;
+}
+
+@keyframes tofuBurgerOpen {
+    0% {
+        transform: var(--state1);
+    }
+
+    50% {
+        transform: var(--state2);
+    }
+
+    100% {
+        transform: var(--state3);
+    }
+}
+
+@keyframes tofuBurgerClose {
+    0% {
+        transform: var(--state3);
+    }
+
+    50% {
+        transform: var(--state2);
+    }
+
+    100% {
+        transform: var(--state1);
+    }
+}
+
+#main-content {
+    transition: 0.5s ease filter;
+}
+
+#main-content.menu-open {
+    filter: opacity(0.5);
+}

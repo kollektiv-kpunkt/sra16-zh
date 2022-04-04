@@ -18,7 +18,7 @@
     --backgroundcolor: var(--color30);
     --textcolor: var(--color10);
 
-    transition: 0.125s ease filter, 0.125s ease opacity;
+    transition: 0.125s ease filter, 0.125s ease opacity, 0.5s ease background-color, 0.5s ease color, 0.5s ease border-color, 0.5s ease color;
 }
 
 .sra-button:hover {
