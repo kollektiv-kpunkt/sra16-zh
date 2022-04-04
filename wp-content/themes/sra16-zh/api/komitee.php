@@ -16,7 +16,7 @@ $result = $wpdb->insert("wp_supporters", [
     "uuid" => $data["uuid"],
     "fname" => $data["fname"],
     "lname" => $data["lname"],
-    "position" => $data["position"] || "",
+    "position" => $data["position"],
     "email" => $data["email"],
     "optin" => $data["optin"]
 ]);
