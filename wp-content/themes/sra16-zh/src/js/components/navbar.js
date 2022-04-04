@@ -10,7 +10,7 @@ document.addEventListener("scroll", () => {
     console.log("Fuck you Safari");
     return;
   }
-  if (window.scrollY > this.oldScroll) {
+  if (window.scrollY > this.oldScroll && window.scrollY > 80) {
     scrollBar.classList.add("hidescroll");
   } else {
     scrollBar.classList.remove("hidescroll");

@@ -1,0 +1,18 @@
+.orga-logo {
+    width: calc(100% / var(--columns) - ((var(--columns) - 1) * var(--gutter)) / var(--columns));
+
+    --columns: 4;
+    --gutter: 1rem;
+}
+
+@media screen and (max-width: 980px) {
+    .orga-logo {
+        --columns: 3;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .orga-logo {
+        --columns: 2;
+    }
+}
