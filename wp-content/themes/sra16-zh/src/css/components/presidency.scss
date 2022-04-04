@@ -1,0 +1,12 @@
+.sra-member {
+    width: calc(100% / var(--columns) - ((var(--columns) - 1) * var(--gutter)) / var(--columns));
+
+    --columns: 3;
+    --gutter: 1rem;
+}
+
+@media screen and (max-width: 680px) {
+    .sra-member {
+        --columns: 2;
+    }
+}

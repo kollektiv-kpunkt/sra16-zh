@@ -53,5 +53,23 @@ $copres = [
 
 
 <div class="komitee-copres-wrapper">
-
+    <h2 class="text-3xl">Co-Präsidium</h2>
+    <div class="komitee-copres-inner flex gap-4 flex-wrap justify-center">
+        <?php
+        foreach ($copres as $key => $copre) : ?>
+        <div class="sra-member">
+            <div class="sra-member-inner flex flex-col gap-2">
+                <div class="sra-member-image">
+                    <img src="<?= get_template_directory_uri() ?>/public/presidency/<?= $copre["image"] ?>" alt="">
+                </div>
+                <div class="sra-member-info">
+                    <h3 class="text-xl mb-0"><?= $copre["name"] ?></h3>
+                    <p class="text-sm"><?= $copre["function"] ?></p>
+                </div>
+            </div>
+        </div>
+        <?php
+        endforeach;
+        ?>
+    </div>
 </div>
