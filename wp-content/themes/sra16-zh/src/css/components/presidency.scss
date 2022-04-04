@@ -2,7 +2,7 @@
     width: calc(100% / var(--columns) - ((var(--columns) - 1) * var(--gutter)) / var(--columns));
 
     --columns: 3;
-    --gutter: 1rem;
+    --gutter: 1.5rem;
 }
 
 @media screen and (max-width: 680px) {
