@@ -1,0 +1,81 @@
+input {
+    outline: none;
+}
+
+.form-wrapper .input-wrapper {
+    width: calc(50% - 0.75rem);
+}
+
+@media screen and (max-width: 767px) {
+    .form-wrapper .input-wrapper {
+        width: 100%;
+    }
+}
+
+.form-wrapper .input-wrapper button {
+    width: 100%;
+}
+
+.form-wrapper .input-wrapper.fullwidth {
+    width: 100%;
+}
+
+.form-wrapper .input-wrapper input {
+    width: 100%;
+    border-bottom: 2px solid var(--color60);
+    background-color: var(--color10);
+    padding: 0.25rem;
+}
+
+input::placeholder {
+    color: var(--color30);
+    opacity: 1;
+}
+
+input:-ms-input-placeholder {
+    color: var(--color30);
+}
+
+input::-ms-input-placeholder {
+    color: var(--color30);
+}
+
+body.ds-2 input, body.ds-4 input, body.ds-5 input {
+    color: white;
+}
+
+.input-wrapper.checkbox label {
+    cursor: pointer;
+}
+
+
+.input-wrapper.checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.input-wrapper.checkbox input[type="checkbox"]+label:before {
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f0c8";
+    letter-spacing: 10px;
+    cursor: pointer;
+}
+
+.input-wrapper.checkbox input[type="checkbox"]:checked+label:before {
+    content: "\f14a";
+}
+
+.alertBar {
+    background-color: var(--bg-color);
+    color: var(--color);
+    border: 3px solid var(--color);
+    border-radius: 0.25rem;
+
+    --bg-color: #82e7a1;
+    --color: #004b16;
+}
+
+.alertBar.error {
+    --bg-color: #ffc0cb;
+    --color: #8b0000;
+}

@@ -17,6 +17,7 @@
         "pecee/simple-router": "4.3.7.2",
         "mailchimp/marketing": "^3.0",
         "matomo/matomo-php-tracker": "^3.0",
-        "envms/fluentpdo": "^2.2"
+        "envms/fluentpdo": "^2.2",
+        "phpmailer/phpmailer": "^6.6"
     }
 }
