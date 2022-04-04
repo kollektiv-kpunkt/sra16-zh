@@ -9,6 +9,7 @@ function sendKomitee(e) {
     uuid: uuid(),
     fname: document.getElementById("fname").value,
     lname: document.getElementById("lname").value,
+    position: document.getElementById("position").value,
     email: document.getElementById("email").value,
     optin: document.getElementById("optin").checked,
   };
