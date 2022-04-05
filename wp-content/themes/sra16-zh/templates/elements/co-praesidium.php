@@ -13,7 +13,7 @@ $copres = [
         "image" => "Taeubert_Dominic.jpg"
     ],
     [
-        "name" => "Nicola Juste",
+        "name" => "Nicola Yuste",
         "party" => "SP",
         "function" => "Kantonsrätin",
         "image" => "Nicola_Juste.jpg"
