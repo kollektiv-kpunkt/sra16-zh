@@ -3,6 +3,7 @@ $bodyclasses = [];
 $design_system = "ds-" . rand(1,5);
 global $template;
 array_push($bodyclasses, explode(".php", end(explode('/', $template)))[0]);
+global $specialClass;
 
 if (is_front_page()) {
     array_push($bodyclasses, 'home');
@@ -15,7 +16,7 @@ if (is_front_page()) {
 ?>
 
 <!DOCTYPE html>
-<html <?= get_language_attributes() ?> class="<?= $design_system ?>">
+<html <?= get_language_attributes() ?> class="<?= $design_system ?><?= " " . $specialClass?>">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

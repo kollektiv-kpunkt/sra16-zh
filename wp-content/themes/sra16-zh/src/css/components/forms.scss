@@ -1,5 +1,12 @@
-input {
+input, textarea {
     outline: none;
+}
+
+[type=button],
+[type=reset],
+[type=submit],
+button {
+    appearance: none;
 }
 
 .form-wrapper .input-wrapper {
@@ -20,11 +27,15 @@ input {
     width: 100%;
 }
 
-.form-wrapper .input-wrapper input {
+.form-wrapper .input-wrapper input, .form-wrapper .input-wrapper textarea {
     width: 100%;
     border-bottom: 2px solid var(--color60);
     background-color: var(--color10);
     padding: 0.25rem;
+}
+
+.form-wrapper .input-wrapper textarea.autoresize {
+    resize: none;
 }
 
 input::placeholder {
@@ -40,7 +51,9 @@ input::-ms-input-placeholder {
     color: var(--color30);
 }
 
-body.ds-2 input, body.ds-4 input, body.ds-5 input {
+body.ds-2 input, body.ds-4 input, body.ds-5 input, body.ds-2 textarea,
+body.ds-4 textarea,
+body.ds-5 textarea{
     color: white;
 }
 
@@ -63,6 +76,23 @@ body.ds-2 input, body.ds-4 input, body.ds-5 input {
 
 .input-wrapper.checkbox input[type="checkbox"]:checked+label:before {
     content: "\f14a";
+}
+
+.input-wrapper.file {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.input-wrapper.file input[type=file] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    opacity: 0;
+    z-index: 100;
 }
 
 .alertBar {

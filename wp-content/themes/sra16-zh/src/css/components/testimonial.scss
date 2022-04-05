@@ -1,0 +1,91 @@
+html.testimonial .navBarWrapper, html.testimonial footer {
+    display: none;
+}
+
+#testimonial-container {
+    background-color: var(--color60);
+    width: 1080px;
+    height: 1080px;
+    position: relative;
+
+    --color60: #00A99E;
+    --color30: #EF74A5;
+    --color10: #FAE854;
+}
+
+#testimonial-bg-container path {
+    fill: var(--color10);
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#testimonial-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#testimonial-img-container {
+    width: calc(50% - 0.5rem)
+}
+
+#testimonial-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#testimonial-content-container {
+    width: calc(50%);
+    color: white;
+}
+
+#testimonial-content-inner {
+    transform: translateY(-36px);
+}
+
+p#testimonial-quote {
+    font-size: 54px;
+}
+
+p#testimonial-quote.size-2 {
+    font-size: 45px;
+}
+
+p#testimonial-quote.size-1 {
+    font-size: 40px;
+}
+
+#testimonial-content-container p {
+    line-height: 1.15 !important;
+}
+
+#testimonial-logo-container svg {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 16rem;
+    height: auto;
+}
+
+p.testimonial-slogan {
+    font-size: 99px;
+    font-weight: 900;
+    line-height: 0.89;
+    padding: 0.5rem 0.5rem 0.13rem 0.5rem;
+    background-color: #EF74A5;
+    color: #FAE854;
+    width: fit-content;
+    margin-top: 0.5rem;
+}
+
+#testimonial-slogan-container {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}

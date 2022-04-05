@@ -1,3 +1,8 @@
+# Personal
+public/testimonials/*
+!public/testimonials/.gitkeep
+
+
 # NPM
 # Logs
 logs

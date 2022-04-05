@@ -75,11 +75,37 @@ Router::post('/api/v1/newsletter/', function() {
 });
 
 
-// Router::get('/api/v1/testimonial/', function() {
-//     header("Content-Type: text/html");
-//     require(__DIR__ . "/testimonial/index.php");
-//     exit;
-// });
+Router::post('/api/v1/testimonial/picture', function() {
+    require(__DIR__ . "/testimonial/picture.php");
+    exit;
+});
+
+Router::get('/api/v1/testimonial/id/{uuid}', function($uuid) {
+    header("Content-type: text/html");
+    require(__DIR__ . "/testimonial/presentation.php");
+    exit;
+});
+
+Router::post('/api/v1/testimonial/data', function() {
+    $mcapi = $_ENV["MCAPI"];
+    $mclistid = $_ENV["MCLISTID"];
+    $mcserver = $_ENV["MCSERVER"];
+    $client = new \MailchimpMarketing\ApiClient();
+    $client->setConfig([
+        'apiKey' => $mcapi,
+        'server' => $mcserver
+    ]);
+
+    $mtmpageid = $_ENV["MATOMOID"];
+    $mtmurl = $_ENV["MATOMOURL"];
+    $mtmtoken = $_ENV["MATOMOTOKEN"];
+    $mtm = new MatomoTracker((int)$mtmpageid, $mtmurl);
+
+    $mtm->setTokenAuth($mtmtoken);
+
+    require(__DIR__ . "/testimonial/data.php");
+    exit;
+});
 
 
 // Start the routing

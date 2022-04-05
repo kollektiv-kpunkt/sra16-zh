@@ -95,13 +95,13 @@ p+p {
     margin-top: 0.75rem;
 }
 
-.page-main-container a {
+.page-main-container a:not(.sra-button) {
     color: var(--color60);
     text-decoration: underline;
 }
 
-body.ds-2 .page-main-container a,
-body.ds-4 .page-main-container a {
+body.ds-2 .page-main-container a:not(.sra-button),
+body.ds-4 .page-main-container a:not(.sra-button) {
     color: var(--color10);
 }
 
