@@ -22,6 +22,29 @@
                         <a href="#" data-action="newsletter" class="sra-button sra-button-ter">Newsletter abonnieren</a>
                         <a href="/spenden" class="sra-button">Spenden</a>
                     </div>
+                    <div class="cta-newsletter-container" hidden>
+                        <form id="newsletter-form" class="mt-4">
+                            <div class="alertBar p-3 leading-none my-4" hidden>
+                            </div>
+                            <div class="form-wrapper flex flex-wrap gap-6 justify-end">
+                                <div class="input-wrapper flex flex-col gap-2">
+                                    <label for="fname" class="text-white">Vorname</label>
+                                    <input type="text" name="fname" id="fname" required>
+                                </div>
+                                <div class="input-wrapper flex flex-col gap-2">
+                                    <label for="email" class="text-white">E-Mail Adresse</label>
+                                    <input type="text" name="email" id="email" required>
+                                </div>
+                                <div class="input-wrapper checkbox fullwidth">
+                                    <input type="checkbox" name="optin" id="optin" checked required>
+                                    <label for="optin" class="text-xs text-white">Ich bin einverstanden, dass das Komitee mich auf dem Laufenden hält.</label>
+                                </div>
+                                <div class="input-wrapper">
+                                    <button type="submit" class="sra-button">Jetzt beitreten</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

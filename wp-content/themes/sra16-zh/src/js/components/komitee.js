@@ -37,4 +37,8 @@ function sendKomitee(e) {
   })();
 }
 
-document.querySelector("#komitee-form").addEventListener("submit", sendKomitee);
+if (document.querySelector("#komitee-form")) {
+  document
+    .querySelector("#komitee-form")
+    .addEventListener("submit", sendKomitee);
+}

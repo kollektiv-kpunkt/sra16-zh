@@ -94,3 +94,28 @@ small,
 p+p {
     margin-top: 0.75rem;
 }
+
+.page-main-container a {
+    color: var(--color60);
+    text-decoration: underline;
+}
+
+body.ds-2 .page-main-container a,
+body.ds-4 .page-main-container a {
+    color: var(--color10);
+}
+
+/* ul fix */
+body.page #main-content ul {
+    list-style-type: square;
+    list-style-position: inside;
+    list-style-image: none;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+body.page #main-content ul li {
+    margin-bottom: 0.25rem;
+    padding-left: 1.3rem;
+    text-indent: -1.3rem;
+}

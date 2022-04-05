@@ -5,6 +5,11 @@ if($json = json_decode(file_get_contents("php://input"), true)) {
 } else {
     $data = $_POST;
 }
+
+if (isset($_COOKIE["mtm_consent"])) {
+    $mtm->doTrackEvent("Komitee Signup", "Final", $data["uuid"]);
+}
+
 global $wpdb;
 
 if ($wpdb->query($wpdb->prepare("SELECT * from `wp_supporters` WHERE `email` = %s", array($data["email"]))) != 0) {
@@ -50,6 +55,24 @@ if ($data["optin"]) {
     ];
     echo json_encode($return);
     exit;
+    }
+
+    try {
+        $response = $client->lists->createListMemberNote(
+            $mclistid,
+            strtolower(md5($data["email"])),
+            [
+                "note" => "Form submission: " . $data["uuid"]
+            ]
+        );
+    } catch (GuzzleHttp\Exception\ClientException $e) {
+        $return = [
+        "sucess" => false,
+        "content" => $e->getResponse()->getBody()->getContents(),
+        "errors" => [$e->getMessage()]
+        ];
+        echo json_encode($return);
+        exit;
     }
 }
 

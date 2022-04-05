@@ -20,7 +20,7 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="smallContainer mt-12">
+    <div class="smallContainer mt-12 page-main-container">
         <?php the_content(); ?>
     </div>
 
