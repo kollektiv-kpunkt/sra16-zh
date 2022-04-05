@@ -8,7 +8,7 @@ $copres = [
     ],
     [
         "name" => "Dominic Täubert",
-        "party" => "jEVP",
+        "party" => "",
         "function" => "Co-Präsident Junge EVP CH",
         "image" => "Taeubert_Dominic.jpg"
     ],
@@ -20,7 +20,7 @@ $copres = [
     ],
     [
         "name" => "Julian Croci",
-        "party" => "Grüne",
+        "party" => "",
         "function" => "GL-Mitglied Grüne / Vorstandsmitglied Junge Grüne",
         "image" => "Julian_Groci.jpg"
     ],
@@ -32,13 +32,13 @@ $copres = [
     ],
     [
         "name" => "Florian Fuss",
-        "party" => "JGLP",
+        "party" => "",
         "function" => "Vorstandsmitglied JGLP",
         "image" => "Florian-Fuss.jpg"
     ],
     [
         "name" => "Laura Fischer",
-        "party" => "JUSO",
+        "party" => "",
         "function" => "Co-Präsidentin JUSO Kanton Zürich",
         "image" => "Laura_Fischer.jpg"
     ],
@@ -50,7 +50,7 @@ $copres = [
     ],
     [
         "name" => "Nicolo Carle",
-        "party" => "JUPA",
+        "party" => "",
         "function" => "Co-Präsident Jugenparlament",
         "image" => "Nicolo_Carle.jpg"
     ],
@@ -70,7 +70,7 @@ $copres = [
                 </div>
                 <div class="sra-member-info">
                     <h3 class="text-xl mb-1 leading-none"><?= $copre["name"] ?></h3>
-                    <p class="text-sm"><?= $copre["function"] ?>, <?= $copre["party"] ?></p>
+                    <p class="text-sm"><?= $copre["function"] ?><?php if ($copre["party"] != ""): ?>, <?= $copre["party"] ?> <?php endif; ?></p>
                 </div>
             </div>
         </div>
