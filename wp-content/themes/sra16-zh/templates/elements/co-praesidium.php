@@ -48,6 +48,12 @@ $copres = [
         "function" => "Kantonsrätin",
         "image" => "Anne-Claude_Hensch.jpg"
     ],
+    [
+        "name" => "Nicolo Carle",
+        "party" => "JUPA",
+        "function" => "Co-Präsident Jugenparlament",
+        "image" => "Nicolo_Carle.jpg"
+    ],
 ];
 ?>
 

@@ -75,6 +75,11 @@ Router::post('/api/v1/newsletter/', function() {
 });
 
 
+// Router::get('/api/v1/testimonial/', function() {
+//     header("Content-Type: text/html");
+//     require(__DIR__ . "/testimonial/index.php");
+//     exit;
+// });
 
 
 // Start the routing

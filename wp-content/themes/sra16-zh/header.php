@@ -1,5 +1,21 @@
+<?php
+$bodyclasses = [];
+$design_system = "ds-" . rand(1,5);
+global $template;
+array_push($bodyclasses, explode(".php", end(explode('/', $template)))[0]);
+
+if (is_front_page()) {
+    array_push($bodyclasses, 'home');
+    array_push($bodyclasses, 'ds-1');
+} else {
+    array_push($bodyclasses, $design_system);
+}
+
+
+?>
+
 <!DOCTYPE html>
-<html <?= get_language_attributes() ?>>
+<html <?= get_language_attributes() ?> class="<?= $design_system ?>">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,21 +24,6 @@
     wp_head();
     ?>
 </head>
-<?php
-$bodyclasses = [];
-
-global $template;
-array_push($bodyclasses, explode(".php", end(explode('/', $template)))[0]);
-
-if (is_front_page()) {
-    array_push($bodyclasses, 'home');
-    array_push($bodyclasses, 'ds-1');
-} else {
-    array_push($bodyclasses, "ds-" . rand(1,5));
-}
-
-
-?>
 <body class="<?php
         $i=0;
         foreach($bodyclasses as $bodyclass):
