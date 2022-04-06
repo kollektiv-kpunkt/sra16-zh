@@ -80,6 +80,9 @@ if (document.querySelector("#testimonial-picture")) {
               const content = await rawResponse.json();
               if (content.status === "success") {
                 document.getElementById("testimonial-form").remove();
+                document.querySelector(
+                  "#testimonial-presentation-container img"
+                ).src = `https://imggen.victorinus.ch/pn44/testimonial?url=https://sra16-zh.ch/api/v1/testimonial/id/?uuid=${content.uuid}`;
                 document.getElementById(
                   "testimonial-presentation-container"
                 ).style.display = "block";
