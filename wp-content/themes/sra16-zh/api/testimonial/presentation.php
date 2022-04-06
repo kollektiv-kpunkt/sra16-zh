@@ -11,9 +11,9 @@ $testimonial = $wpdb->get_row($wpdb->prepare( "SELECT * FROM `wp_testimonials` W
 
 if (strlen($testimonial["testimonial"] < 120)) {
     $quotesize = 3;
-} else if (count($testimonial["testimonial"] < 150)) {
+} else if (strlen($testimonial["testimonial"] < 150)) {
     $quotesize = 2;
-} else {
+} else if (strlen($testimonial["testimonial"] < 200)) {
     $quotesize = 1;
 }
 
