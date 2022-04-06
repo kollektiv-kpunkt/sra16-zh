@@ -3,22 +3,52 @@ html.testimonial .navBarWrapper, html.testimonial footer, html.testimonial #glow
 }
 
 #testimonial-container {
-    background-color: var(--color60);
-    width: 1080px;
-    height: 1080px;
+    background-color: var(--primary);
+    width: 100%;
+    padding-bottom: 100%;
     position: relative;
 
-    --color60: #00A99E;
-    --color30: #EF74A5;
-    --color10: #FAE854;
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE10+/Edge */
+    user-select: none;
+    /* Standard */
+    --primary: var(--color60);
+    --secondary: var(--color30);
+    --tertiary: var(--color10);
+
+    --baseSize: 13px;
 }
 
-#testimonial-bg-container path {
-    fill: var(--color10);
+body.ds-5 #testimonial-container {
+    --primary: var(--color10);
+    --secondary: var(--color30);
+    --tertiary: var(--color60);
+}
+
+@media screen and (max-width: 829px) {
+    #testimonial-container {
+        --baseSize: 1.56815vw;
+    }
+}
+
+#testimonial-bg-container {
     opacity: 0.1;
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
+}
+#testimonial-bg-container svg {
+    width: 100%;
+    height: 100%;
+}
+
+#testimonial-bg-container path {
+    fill: var(--tertiary);
 }
 
 #testimonial-wrapper {
@@ -27,16 +57,38 @@ html.testimonial .navBarWrapper, html.testimonial footer, html.testimonial #glow
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 2;
 }
 
 #testimonial-img-container {
-    width: calc(50% - 0.5rem)
+    width: calc(50% - 0.5 * var(--baseSize));
+}
+
+#testimonial-img-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 #testimonial-img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+#testimonial-img-blind {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background-color: var(--tertiary);
+    opacity: 0.15;
+    mix-blend-mode: color;
 }
 
 
@@ -46,19 +98,23 @@ html.testimonial .navBarWrapper, html.testimonial footer, html.testimonial #glow
 }
 
 #testimonial-content-inner {
-    transform: translateY(-36px);
+    transform: translateY(calc(-2 * var(--baseSize)));
+    width: 100%;
 }
 
 p#testimonial-quote {
-    font-size: 54px;
+    font-size: calc(3.25 * var(--baseSize));
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: calc(1.25 * var(--baseSize));
 }
 
 p#testimonial-quote.size-2 {
-    font-size: 45px;
+    font-size: calc(2.75 * var(--baseSize));
 }
 
 p#testimonial-quote.size-1 {
-    font-size: 40px;
+    font-size: calc(2.5 * var(--baseSize));
 }
 
 #testimonial-content-container p {
@@ -67,25 +123,63 @@ p#testimonial-quote.size-1 {
 
 #testimonial-logo-container svg {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    width: 16rem;
+    top: calc(1 * var(--baseSize));
+    right: calc(1 * var(--baseSize));
+    width: calc(15 * var(--baseSize));
     height: auto;
+    z-index: 4;
+}
+
+.testimonial-subtitle {
+    font-size: calc(1.75 * var(--baseSize));
+    margin-top: 0;
+}
+
+.testimonial-subtitle#testimonial-position {
+    margin-top: calc(0.5 * var(--baseSize));
 }
 
 p.testimonial-slogan {
-    font-size: 99px;
+    font-size: calc(6 * var(--baseSize));
     font-weight: 900;
     line-height: 0.89;
-    padding: 0.5rem 0.5rem 0.13rem 0.5rem;
-    background-color: #EF74A5;
-    color: #FAE854;
+    padding: calc(0.5 * var(--baseSize)) calc(0.5 * var(--baseSize)) calc(0.13 * var(--baseSize)) calc(0.5 * var(--baseSize));
+    background-color: var(--secondary);
+    color: var(--tertiary);
     width: fit-content;
-    margin-top: 0.5rem;
+    margin-top: calc(0.5 * var(--baseSize));
+}
+
+body.ds-5 p.testimonial-slogan {
+    color: var(--primary);
 }
 
 #testimonial-slogan-container {
     position: absolute;
-    bottom: 1rem;
-    left: 1rem;
+    bottom: calc(1 * var(--baseSize));
+    left: calc(1 * var(--baseSize));
+    z-index: 3;
+}
+
+#testimonial-logo-container svg #logo-sixteen path,
+#testimonial-logo-container svg #logo-border path {
+    fill: var(--secondary);
+}
+
+#testimonial-logo-container svg #logo-box {
+    fill: var(--tertiary);
+}
+
+#testimonial-logo-container svg #logo-text path {
+    fill: var(--primary);
+}
+
+#testimonial-change-ds::after {
+    content: "\f2f9";
+    font-family: FontAwesome;
+    font-weight: 900;
+    line-height: 0;
+    margin-left: 0.5em;
+    display: inline-block;
+    transition: 0.125s ease transform;
 }

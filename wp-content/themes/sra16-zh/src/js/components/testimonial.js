@@ -2,6 +2,8 @@ import "cropperjs/dist/cropper.css";
 import Cropper from "cropperjs";
 import { v4 as uuid } from "uuid";
 
+import { toPng } from "html-to-image";
+
 if (document.querySelector("#testimonial-form")) {
   document
     .querySelector("#testimonial-form")
@@ -43,7 +45,7 @@ if (document.querySelector("#testimonial-picture")) {
       });
       testimonialCreateButton.addEventListener("click", function (e) {
         e.preventDefault();
-        var croppedimage = cropper.getCroppedCanvas().toDataURL("image/jpg");
+        const croppedimage = cropper.getCroppedCanvas().toDataURL("image/jpg");
         (async () => {
           const rawResponse = await fetch(`/api/v1/testimonial/picture`, {
             method: "POST",
@@ -69,20 +71,52 @@ if (document.querySelector("#testimonial-picture")) {
               optin: document.getElementById("optin").checked,
             };
             (async () => {
-              const rawResponse = await fetch(`/api/v1/testimonial/data`, {
-                method: "POST",
-                headers: {
-                  // Accept: "application/json",
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify(testimonialdata),
-              });
-              const content = await rawResponse.json();
+              //   const rawResponse = await fetch(`/api/v1/testimonial/data`, {
+              //     method: "POST",
+              //     headers: {
+              //       // Accept: "application/json",
+              //       "Content-Type": "application/json",
+              //     },
+              //     body: JSON.stringify(testimonialdata),
+              //   });
+              //   const content = await rawResponse.json();
+              let content = {
+                status: "success",
+              };
               if (content.status === "success") {
                 document.getElementById("testimonial-form").remove();
+                console.log(testimonialdata);
+                document.getElementById("testimonial-img").src = croppedimage;
                 document.querySelector(
-                  "#testimonial-presentation-container img"
-                ).src = `https://imggen.victorinus.ch/pn44/testimonial?url=https://sra16-zh.ch/api/v1/testimonial/id/?uuid=${content.uuid}`;
+                  "#testimonial-quote i"
+                ).innerText = `«${testimonialdata.testimonial}»`;
+                document.querySelector(
+                  "#testimonial-name b"
+                ).innerText = `${testimonialdata.fname} ${testimonialdata.lname}`;
+                document.querySelector("#testimonial-position").innerText =
+                  testimonialdata.position;
+                if (testimonialdata.over18) {
+                  document.querySelector("#testimonial-slogan-1").innerText =
+                    "Meine Stimme";
+                  document.querySelector("#testimonial-slogan-2").innerText =
+                    "für deine Stimme";
+                } else {
+                  document.querySelector("#testimonial-slogan-1").innerText =
+                    "Deine Stimme";
+                  document.querySelector("#testimonial-slogan-2").innerText =
+                    "für meine Stimme";
+                }
+
+                if (testimonialdata.testimonial.length > 125) {
+                  document
+                    .querySelector("#testimonial-quote")
+                    .classList.add("size-1");
+                } else if (testimonialdata.testimonial.length > 80) {
+                  document
+                    .querySelector("#testimonial-quote")
+                    .classList.add("size-2");
+                }
+
                 document.getElementById(
                   "testimonial-presentation-container"
                 ).style.display = "block";
@@ -93,4 +127,41 @@ if (document.querySelector("#testimonial-picture")) {
       });
     };
   }
+}
+
+if (document.querySelector("#testimonial-change-ds")) {
+  document
+    .querySelector("#testimonial-change-ds")
+    .addEventListener("click", function (e) {
+      e.preventDefault();
+      let ds = document.querySelector("body").getAttribute("data-ds");
+      let dsNo = parseInt(ds.split("-")[1]);
+      let newDs;
+      if (dsNo === 5) {
+        newDs = "ds-1";
+      } else {
+        newDs = `ds-${dsNo + 1}`;
+      }
+      document.querySelector("body").setAttribute("data-ds", newDs);
+      document.querySelector("body").classList.remove(ds);
+      document.querySelector("body").classList.add(newDs);
+    });
+}
+
+if (document.querySelector("#testimonial-download")) {
+  document
+    .querySelector("#testimonial-download")
+    .addEventListener("click", function (e) {
+      e.preventDefault();
+      toPng(document.getElementById("testimonial-container")).then(function (
+        dataUrl
+      ) {
+        var link = document.createElement("a");
+        let name = document.querySelector("#testimonial-name b").innerText;
+        link.download = `SRA16-testimonial-${name}-${uuid()}.png`;
+        link.href = dataUrl;
+        link.click();
+        link.remove();
+      });
+    });
 }

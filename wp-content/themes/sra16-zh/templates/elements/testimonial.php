@@ -24,7 +24,7 @@
                 </div>
                 <div class="input-wrapper textarea fullwidth flex flex-col gap-2">
                     <label for="testimonial">Zitat</label>
-                    <textarea name="testimonial" class="autoresize" id="testimonial" row="3" maxlength="150">Ich sage ja zum Stimmrechtsalter 16, weil...</textarea>
+                    <textarea name="testimonial" class="autoresize" id="testimonial" row="3" maxlength="150" required>Ich sage ja zum Stimmrechtsalter 16, weil </textarea>
                 </div>
                 <div class="input-wrapper checkbox fullwidth">
                     <input type="checkbox" name="optin" id="optin" checked>
@@ -38,7 +38,6 @@
         <div class="form-step-container" data-testimonial-step="2" hidden>
             <div class="form-wrapper">
                 <h3 class="mt-7">Lade bitte hier ein Foto von dir hoch</h3>
-                <p class="mb-4">Aktuell ist es noch nicht möglich, ein Testimonial ohne Foto abzugeben (Folgt).</p>
                 <div class="input-wrapper file" id="upload-button-wrapper">
                     <a href="3" onclick="return false;"; class="sra-button sra-button-arrow">Bild hochladen</a>
                     <input type="file" name="testimonial-picture" id="testimonial-picture" />
@@ -49,8 +48,40 @@
         </div>
     </form>
     <div id="testimonial-presentation-container" hidden>
-        <p class="mb-7">Hier ist dein Testimonial:</p>
-        <img src="#" alt="Your Testimonial">
-        <a href="#" onclick="return false" class="sra-button sra-button-arrowdown mt-7">Testimonial herunterladen</a>
+        <h3 class="mt-7">Hier ist dein Testimonial:</h3>
+        <div id="testimonial-container">
+            <div id="testimonial-bg-container">
+                <?php
+                echo file_get_contents(__DIR__ . "/../../public/testimonial-elements/bg.svg");
+                ?>
+            </div>
+            <div id="testimonial-wrapper" class="flex justify-between">
+                <div id="testimonial-img-container">
+                    <div id="testimonial-img-inner">
+                        <img src="" alt="" id="testimonial-img">
+                        <div id="testimonial-img-blind"></div>
+                    </div>
+                </div>
+                <div id="testimonial-content-container" class="flex">
+                    <div id="testimonial-content-inner" class="my-auto p-4">
+                        <p class="font-bold" id="testimonial-quote"><i></i></p>
+                        <p class="testimonial-subtitle" id="testimonial-name"><b></b></p>
+                        <p class="testimonial-subtitle" id="testimonial-position"></p>
+                    </p>
+                    </div>
+                </div>
+            </div>
+            <div id="testimonial-logo-container">
+                <?php
+                get_template_part( "templates/partials/logo" );
+                ?>
+            </div>
+            <div id="testimonial-slogan-container">
+                <p class="testimonial-slogan" id="testimonial-slogan-1"></p>
+                <p class="testimonial-slogan" id="testimonial-slogan-2"></p>
+            </div>
+        </div>
+        <a href="#" id="testimonial-change-ds" class="sra-button ml-auto mr-0 text-sm">Farbschema wechseln</a>
+        <a href="#" id="testimonial-download" class="sra-button sra-button-arrowdown mt-5 ml-auto mr-0 ">Testimonial herunterladen</a>
     </div>
 </div>
