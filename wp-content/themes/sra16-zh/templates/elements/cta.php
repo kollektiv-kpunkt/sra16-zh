@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="input-wrapper flex flex-col gap-2">
                                     <label for="email" class="text-white">E-Mail Adresse</label>
-                                    <input type="text" name="email" id="email" required>
+                                    <input type="email" name="email" id="email" required>
                                 </div>
                                 <div class="input-wrapper checkbox fullwidth">
                                     <input type="checkbox" name="optin" id="optin" checked required>

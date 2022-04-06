@@ -16,7 +16,7 @@
                 </div>
                 <div class="input-wrapper flex flex-col gap-2">
                     <label for="email">E-Mail Adresse</label>
-                    <input type="text" name="email" id="email" required>
+                    <input type="email" name="email" id="email" required>
                 </div>
                 <div class="input-wrapper checkbox fullwidth">
                     <input type="checkbox" name="over18" id="over18" checked>
