@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <div id="testimonial-content-container" class="flex">
-                    <div id="testimonial-content-inner" class="my-auto p-4">
+                    <div id="testimonial-content-inner" class="my-auto">
                         <p class="font-bold" id="testimonial-quote"><i></i></p>
                         <p class="testimonial-subtitle" id="testimonial-name"><b></b></p>
                         <p class="testimonial-subtitle" id="testimonial-position"></p>
@@ -83,5 +83,11 @@
         </div>
         <a href="#" id="testimonial-change-ds" class="sra-button ml-auto mr-0 text-sm">Farbschema wechseln</a>
         <a href="#" id="testimonial-download" class="sra-button sra-button-arrowdown mt-5 ml-auto mr-0 ">Testimonial herunterladen</a>
+    </div>
+</div>
+
+<div id="testimonial-loader-blind">
+    <div id="testimonial-loader-inner">
+        <p class="text-2xl text-white">Dein Testimonial wird geladen...</p>
     </div>
 </div>

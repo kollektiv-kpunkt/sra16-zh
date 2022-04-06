@@ -31,7 +31,7 @@ body.ds-5 #testimonial-container {
 
 @media screen and (max-width: 829px) {
     #testimonial-container {
-        --baseSize: 1.56815vw;
+        --baseSize: calc((100vw - 2rem) * 0.016375);
     }
 }
 
@@ -99,6 +99,7 @@ body.ds-5 #testimonial-container {
 
 #testimonial-content-inner {
     transform: translateY(calc(-2 * var(--baseSize)));
+    padding: calc(1 * var(--baseSize));
     width: 100%;
 }
 
@@ -143,7 +144,7 @@ p.testimonial-slogan {
     font-size: calc(6 * var(--baseSize));
     font-weight: 900;
     line-height: 0.89;
-    padding: calc(0.5 * var(--baseSize)) calc(0.5 * var(--baseSize)) calc(0.13 * var(--baseSize)) calc(0.5 * var(--baseSize));
+    padding: calc(0.5 * var(--baseSize)) calc(0.15 * var(--baseSize)) calc(0.13 * var(--baseSize)) calc(0.5 * var(--baseSize));
     background-color: var(--secondary);
     color: var(--tertiary);
     width: fit-content;
@@ -182,4 +183,26 @@ body.ds-5 p.testimonial-slogan {
     margin-left: 0.5em;
     display: inline-block;
     transition: 0.125s ease transform;
+}
+
+#testimonial-loader-blind {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000000;
+    background-color: #000000a2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2rem);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.25s ease opacity, 0.25s ease visibility;
+}
+
+#testimonial-loader-blind.show {
+    opacity: 1;
+    visibility: visible;
 }
