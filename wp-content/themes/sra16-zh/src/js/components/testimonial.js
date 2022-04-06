@@ -171,7 +171,6 @@ if (document.querySelector("#testimonial-download")) {
       notyf.success({
         message:
           "Dein Testimonial wird gleich heruntergeladen. Bitte habe einen Moment Geduld :)",
-        dismissible: true,
         duration: 5000,
       });
       toPng(document.getElementById("testimonial-container")).then(function (
