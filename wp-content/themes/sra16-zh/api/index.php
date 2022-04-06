@@ -80,7 +80,7 @@ Router::post('/api/v1/testimonial/picture', function() {
     exit;
 });
 
-Router::get('/api/v1/testimonial/id/{uuid}', function($uuid) {
+Router::get('/api/v1/testimonial/id/', function() {
     header("Content-type: text/html");
     require(__DIR__ . "/testimonial/presentation.php");
     exit;
