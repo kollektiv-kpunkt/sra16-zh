@@ -36,7 +36,7 @@ $browserAgent = $Browser->getBrowser($useragent);
                 </div>
                 <div class="input-wrapper textarea fullwidth flex flex-col gap-2">
                     <label for="testimonial">Zitat</label>
-                    <textarea name="testimonial" class="autoresize" id="testimonial" row="3" maxlength="150" required>Ich sage ja zum Stimmrechtsalter 16, weil </textarea>
+                    <textarea name="testimonial" class="autoresize" id="testimonial" row="3" maxlength="150" required>Ich sage Ja zum Stimmrechtsalter 16, weil </textarea>
                 </div>
                 <div class="input-wrapper checkbox fullwidth">
                     <input type="checkbox" name="optin" id="optin" checked>
@@ -52,7 +52,7 @@ $browserAgent = $Browser->getBrowser($useragent);
                 <h3 class="mt-7">Lade bitte hier ein Foto von dir hoch</h3>
                 <div class="input-wrapper file" id="upload-button-wrapper">
                     <a href="3" onclick="return false;"; class="sra-button sra-button-arrow">Bild hochladen</a>
-                    <input type="file" name="testimonial-picture" id="testimonial-picture" />
+                    <input type="file" name="testimonial-picture" id="testimonial-picture" accept=".jpeg,.jpg,.png,.webP,.tiff"/>
                 </div>
                 <img src="" alt="" id="cropper-testimonial-img">
                 <a href="#" id="cropper-testimonial-button" class="sra-button sra-button-arrow mt-4" style="display: none">Testimonial erstellen</a>
