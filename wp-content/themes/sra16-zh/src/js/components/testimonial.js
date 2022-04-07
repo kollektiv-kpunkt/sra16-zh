@@ -231,7 +231,7 @@ function testimonialTest() {
   document.getElementById("testimonial-presentation-container").style.display =
     "block";
 }
-testimonialTest();
+// testimonialTest();
 
 function pixelsAreWhite(imageData) {
   let white = [];
