@@ -18,6 +18,7 @@
         "mailchimp/marketing": "^3.0",
         "matomo/matomo-php-tracker": "^3.0",
         "envms/fluentpdo": "^2.2",
-        "phpmailer/phpmailer": "^6.6"
+        "phpmailer/phpmailer": "^6.6",
+        "foroco/php-browser-detection": "^2.3"
     }
 }

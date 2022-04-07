@@ -1,6 +1,18 @@
-<div class="testimonial-wrapper">
+<?php
+$Browser = new foroco\BrowserDetection();
+$useragent = $_SERVER['HTTP_USER_AGENT'];
+$browserAgent = $Browser->getBrowser($useragent);
+?>
+
+<div class="testimonial-wrapper"<?= ($browserAgent["browser_safari_original"]) ? " data-browser='fuckusafari'" : ""; ?>>
     <form id="testimonial-form" class="mt-4">
         <div class="form-step-container" data-testimonial-step="1">
+            <?php
+            if ($browserAgent["browser_safari_original"]): ?>
+                <p class="text-xs mb-4 text-neutral-500">Wir haben bemerkt, dass du Safari benutzt. Das <i>kann</i> zu Problemen mit deinem Testimonial führen. Falls es nicht funktioniert, versuch es bitte mit einem anderen Browser.</p>
+            <?php
+            endif;
+            ?>
             <div class="form-wrapper flex flex-wrap gap-6 justify-end">
                 <div class="input-wrapper flex flex-col gap-2">
                     <label for="fname">Vorname</label>
@@ -60,6 +72,7 @@
                     <div id="testimonial-img-inner">
                         <img src="" alt="" id="testimonial-img">
                         <div id="testimonial-img-blind"></div>
+                        <div id="testimonial-img-bg"></div>
                     </div>
                 </div>
                 <div id="testimonial-content-container" class="flex">

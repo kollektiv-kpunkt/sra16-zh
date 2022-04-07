@@ -1,6 +1,7 @@
 # Personal
 public/testimonials/*
 !public/testimonials/.gitkeep
+*.DS_Store
 
 
 # NPM
