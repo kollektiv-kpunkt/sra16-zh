@@ -8,7 +8,7 @@ $supporters = $wpdb->get_results("SELECT * from `wp_supporters` WHERE `status` =
     $i = 0;
     foreach ($supporters as $supporter): ?>
 
-    <b><?= $supporter["fname"] ?> <?= $supporter["lname"] ?>,</b> <?= $supporter["position"] ?><?= ($i < count($supporters) - 1) ? ";" : "" ?>
+    <b><?= $supporter["fname"] ?> <?= $supporter["lname"] ?><?php if ($supporter["position"] && $supporter["position"] != ""): ?>,</b> <?= $supporter["position"] ?><?php endif; ?><?= ($i < count($supporters) - 1) ? ";" : "" ?>
     <?php
     $i++;
     endforeach;
