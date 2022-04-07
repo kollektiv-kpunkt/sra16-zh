@@ -63,6 +63,19 @@
     transform: translateX(0.15em);
 }
 
+.sra-button.sra-button-arrowback::before {
+    content: "\2039";
+    font-size: 1.5em;
+    line-height: 0;
+    margin-right: 0.15em;
+    display: inline-block;
+    transition: 0.125s ease transform;
+}
+
+.sra-button.sra-button-arrowback:hover::before {
+    transform: translateX(-0.15em);
+}
+
 .sra-button.sra-button-arrowdown::after {
     content: "↓";
     line-height: 0;

@@ -80,9 +80,15 @@ Router::post('/api/v1/testimonial/picture', function() {
     exit;
 });
 
-Router::get('/api/v1/testimonial/id/', function() {
+Router::get('/api/v1/testimonial/view/{uuid}', function($uuid) {
     header("Content-type: text/html");
     require(__DIR__ . "/testimonial/presentation.php");
+    exit;
+});
+
+Router::get('/api/v1/testimonial/', function() {
+    header("Content-type: text/html");
+    require(__DIR__ . "/testimonial/list.php");
     exit;
 });
 
