@@ -25,10 +25,10 @@ $copres = [
         "image" => "Julian_Groci.jpg"
     ],
     [
-        "name" => "Janine Vannaz",
-        "party" => "Mitte",
-        "function" => "Kantonsrätin",
-        "image" => "Janine_Vannaz.jpg"
+        "name" => "Mike Halbheer",
+        "party" => "",
+        "function" => "Co-Präsident Die Junge Mitte ZH",
+        "image" => "Mike_Halbheer.jpg"
     ],
     [
         "name" => "Florian Fuss",
