@@ -98,7 +98,7 @@ $browserAgent = $Browser->getBrowser($useragent);
             </div>
         </div>
         <a href="#" id="testimonial-change-ds" class="sra-button mt-3">Farbschema wechseln</a>
-        <a href="#" id="testimonial-download" class="sra-button sra-button-arrowdown mt-3">Testimonial herunterladen</a>
+        <a href="#" id="testimonial-download" onclick="_paq.push(['trackEvent', 'Testimonial Creation', 'Download', '0']);" class="sra-button sra-button-arrowdown mt-3">Testimonial herunterladen</a>
     </div>
 </div>
 
