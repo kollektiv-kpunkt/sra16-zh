@@ -189,7 +189,7 @@ function testimonialTest() {
   let testimonialdata = {
     uuid: uuid(),
     testimonial_picture:
-      "/wp-content/themes/sra16-zh/public/testimonials/image_624ebf9bcca1714.jpg",
+      "/wp-content/themes/sra16-zh/public/testimonials/image_624e045ba9b4d.jpg",
     fname: "Timothy",
     lname: "Oesch",
     position: "Grafiker und Student",

@@ -94,8 +94,8 @@ $browserAgent = $Browser->getBrowser($useragent);
                 <p class="testimonial-slogan" id="testimonial-slogan-2"></p>
             </div>
         </div>
-        <a href="#" id="testimonial-change-ds" class="sra-button ml-auto mr-0 text-sm">Farbschema wechseln</a>
-        <a href="#" id="testimonial-download" class="sra-button sra-button-arrowdown mt-5 ml-auto mr-0 ">Testimonial herunterladen</a>
+        <a href="#" id="testimonial-change-ds" class="sra-button mt-3">Farbschema wechseln</a>
+        <a href="#" id="testimonial-download" class="sra-button sra-button-arrowdown mt-3">Testimonial herunterladen</a>
     </div>
 </div>
 

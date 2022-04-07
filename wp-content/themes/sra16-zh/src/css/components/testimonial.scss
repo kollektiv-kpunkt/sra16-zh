@@ -2,6 +2,11 @@ html.testimonial .navBarWrapper, html.testimonial footer, html.testimonial #glow
     display: none;
 }
 
+#testimonial-presentation-container {
+    max-width: 540px;
+    margin: auto;
+}
+
 #testimonial-container {
     background-color: var(--primary);
     width: 100%;
@@ -20,7 +25,7 @@ html.testimonial .navBarWrapper, html.testimonial footer, html.testimonial #glow
     --secondary: var(--color30);
     --tertiary: var(--color10);
 
-    --baseSize: 13px;
+    --baseSize: 8.8414px;
 }
 
 body.ds-5 #testimonial-container {
@@ -29,7 +34,7 @@ body.ds-5 #testimonial-container {
     --tertiary: var(--color60);
 }
 
-@media screen and (max-width: 829px) {
+@media screen and (max-width: 574px) {
     #testimonial-container {
         --baseSize: calc((100vw - 2rem) * 0.016375);
     }
