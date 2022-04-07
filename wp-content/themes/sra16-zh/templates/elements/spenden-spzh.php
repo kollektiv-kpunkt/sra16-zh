@@ -1,5 +1,5 @@
 <div id="donation-widget" class="mt-8"></div>
-<script src="https://tamaro.raisenow.com/berpa-0798/latest/widget.js"></script>
+<script src="https://tamaro.raisenow.com/sp-zuerich/latest/widget.js"></script>
 <script>
 window.rnw.tamaro.runWidget('#donation-widget', {
     language: 'de',
