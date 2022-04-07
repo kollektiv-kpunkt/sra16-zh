@@ -32,7 +32,10 @@ $browserAgent = $Browser->getBrowser($useragent);
                 </div>
                 <div class="input-wrapper checkbox fullwidth">
                     <input type="checkbox" name="over18" id="over18" checked>
-                    <label for="over18">Bist du über 18 Jahre alt?</label>
+                    <label for="over18">
+                        Bist du über 18 Jahre alt?
+                    </label>
+                    <span style="width: auto; margin-left: 0.25rem; cursor: pointer" id="testimonial-over18-tooltip" type="none"><i class="fa fa-question-circle"></i></span>
                 </div>
                 <div class="input-wrapper textarea fullwidth flex flex-col gap-2">
                     <label for="testimonial">Zitat</label>

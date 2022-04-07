@@ -5,6 +5,9 @@ import "notyf/notyf.min.css"; // for React, Vue and Svelte
 import { v4 as uuid } from "uuid";
 import scrollIntoView from "scroll-into-view";
 
+import tippy from "tippy.js";
+import "tippy.js/dist/tippy.css"; // optional for styling
+
 const notyf = new Notyf();
 
 import { toJpeg, toCanvas } from "html-to-image";
@@ -273,3 +276,8 @@ function downloadRegular() {
     link.remove();
   });
 }
+
+tippy("#testimonial-over18-tooltip", {
+  content:
+    "Je nachdem, ob du über 18 bist, wird auf deinem Testimonial «Deine Stimme für meine Stimme» oder «Meine Stimme für deine Stimme» stehen.",
+});
