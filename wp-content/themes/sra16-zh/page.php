@@ -9,7 +9,7 @@ get_header();
         if ( has_post_thumbnail() ) {
             $url = get_the_post_thumbnail_url();
         } else {
-            $url = get_template_directory_uri(  ) . "/public/dividers/" . rand(1,13) . ".jpg";
+            $url = get_template_directory_uri(  ) . "/public/dividers/" . rand(1,18) . ".jpg";
         }
         ?>
         <div class="smallContainer page-heroine-inner pt-7">
