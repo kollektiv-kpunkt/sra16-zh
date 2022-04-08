@@ -13,6 +13,9 @@ window.rnw.tamaro.runWidget('#donation-widget', {
             },
         },
     },
+    paymentFormPrefill: {
+      stored_campaign_name: "Allgemeines Spendenformular"
+    }
 })
 </script>
 

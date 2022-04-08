@@ -113,6 +113,27 @@ Router::post('/api/v1/testimonial/data', function() {
     exit;
 });
 
+Router::post('/api/v1/donation/', function() {
+    $mcapi = $_ENV["MCAPI"];
+    $mclistid = $_ENV["MCLISTID"];
+    $mcserver = $_ENV["MCSERVER"];
+    $client = new \MailchimpMarketing\ApiClient();
+    $client->setConfig([
+        'apiKey' => $mcapi,
+        'server' => $mcserver
+    ]);
+
+    $mtmpageid = $_ENV["MATOMOID"];
+    $mtmurl = $_ENV["MATOMOURL"];
+    $mtmtoken = $_ENV["MATOMOTOKEN"];
+    $mtm = new MatomoTracker((int)$mtmpageid, $mtmurl);
+
+    $mtm->setTokenAuth($mtmtoken);
+
+    require(__DIR__ . "/donation.php");
+    exit;
+});
+
 
 // Start the routing
 Router::start();
