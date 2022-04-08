@@ -11,7 +11,7 @@ if ($data["stored_customer_email"]) {
             $mclistid,
             strtolower(md5($data["stored_customer_email"])),
             [
-                "note" => "Donation Amount: " . $data["datatrans_amount"] . " / Donation ID: " . $data["epp_transaction_id"]
+                "note" => "Donation Amount: {$data["datatrans_amount"]} {$data["datatrans_currency"]} / Donation ID: {$data["epp_transaction_id"]}",
             ]
         );
     } catch (GuzzleHttp\Exception\ClientException $e) {
