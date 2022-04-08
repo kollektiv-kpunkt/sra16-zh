@@ -16,6 +16,7 @@ if ($data["optin"]) {
             'merge_fields' => [
                     "FNAME" => $data["fname"]
             ],
+            'tags' => ["Newsletter"],
             "status" => "subscribed",
         ]);
     } catch (GuzzleHttp\Exception\ClientException $e) {

@@ -6,6 +6,29 @@ if($json = json_decode(file_get_contents("php://input"), true)) {
 }
 
 if ($data["stored_customer_email"]) {
+    if ($data["stored_customer_firstname"] && $data["stored_customer_firstname"] != "") {
+        try {
+            $response = $client->lists->setListMember($mclistid, strtolower(md5($data["stored_customer_email"])), [
+                "email_address" => $data["email"],
+                'merge_fields' => [
+                        "FNAME" => $data["stored_customer_firstname"],
+                        "LNAME" => $data["stored_customer_lastname"]
+                ],
+                'tags' => ["Spende"],
+                "status" => "subscribed",
+            ]);
+        } catch (GuzzleHttp\Exception\ClientException $e) {
+        $return = [
+          "status" => "error",
+          "message" => "Da ist etwas schief gelaufen, bitte versuch es nochmals.",
+          "content" => $e->getResponse()->getBody()->getContents(),
+          "errors" => [$e->getMessage()]
+        ];
+        echo json_encode($return);
+        exit;
+        }
+    }
+
     try {
         $response = $client->lists->createListMemberNote(
             $mclistid,
