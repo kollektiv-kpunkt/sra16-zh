@@ -9,15 +9,9 @@ window.rnw.tamaro.runWidget('#donation-widget', {
     translations: {
         de: {
             purposes: {
-                p1: '<?= $_ENV["RNWPURPOSE"] ?>',
+                p1: 'Kampagne zum Stimmrechtsalter 16',
             },
         },
-    },
-    paymentFormPrefill: {
-        stored_customer_email_permission: true,
-        stored_customer_donation_receipt: true,
-        stored_customer_country: 'CH',
-        stored_sxt_address_source: '1008',
     },
 })
 </script>
