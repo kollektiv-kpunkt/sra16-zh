@@ -42,6 +42,7 @@ if ($data["optin"]) {
                     "FNAME" => $data["fname"],
                     "LNAME" => $data["lname"]
             ],
+            "tags" => ["testimonial"],
             "status" => "subscribed",
         ]);
     } catch (GuzzleHttp\Exception\ClientException $e) {
