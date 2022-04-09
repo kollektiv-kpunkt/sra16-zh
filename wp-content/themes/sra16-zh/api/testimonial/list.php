@@ -9,7 +9,7 @@ get_header();
 
 <?php
 global $wpdb;
-$testimonials = $wpdb->get_results($wpdb->prepare( "SELECT * FROM `wp_testimonials`", [] ), ARRAY_A);
+$testimonials = $wpdb->get_results($wpdb->prepare( "SELECT * FROM `wp_testimonials` ORDER BY ID DESC", [] ), ARRAY_A);
 ?>
 
 <div class="mediumContainer mt-32">
