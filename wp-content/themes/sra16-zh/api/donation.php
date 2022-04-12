@@ -30,11 +30,12 @@ if ($data["stored_customer_email"]) {
     }
 
     try {
+        $amount = $data["datatrans_amount"] / 100;
         $response = $client->lists->createListMemberNote(
             $mclistid,
             strtolower(md5($data["stored_customer_email"])),
             [
-                "note" => "Donation Amount: {$data["datatrans_amount"]} {$data["datatrans_currency"]} / Donation ID: {$data["epp_transaction_id"]}",
+                "note" => "Donation Amount: {$amount} {$data["datatrans_currency"]} / Donation ID: {$data["epp_transaction_id"]}",
             ]
         );
     } catch (GuzzleHttp\Exception\ClientException $e) {
