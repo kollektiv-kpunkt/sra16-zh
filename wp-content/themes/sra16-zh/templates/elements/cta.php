@@ -15,7 +15,7 @@
                 <div class="cta-action-container py-12 my-auto scrollAnimation" data-delay="500"">
                     <div class="cta-action-inner text-white">
                         <h1 class="text-5xl mb-4 text-white">Hilf mit!</h1>
-                        <p class="text-2xl">Damit wir den Kanton Zürich von unserem Anliegen überzeugen können, sind wir auf den Einsatz von Menschen wir dir angewiesen. <b style="color: var(--color10)">Danke, dass du uns unterstützt!</b></p>
+                        <p class="text-2xl">Damit wir den Kanton Zürich von unserem Anliegen überzeugen können, sind wir auf den Einsatz von Menschen wie dir angewiesen. <b style="color: var(--color10)">Danke, dass du uns unterstützt!</b></p>
                     </div>
                     <div class="cta-buttons-container mt-8 flex flex-col gap-2">
                         <a href="/komitee#beitreten" class="sra-button">Komitee beitreten</a>
