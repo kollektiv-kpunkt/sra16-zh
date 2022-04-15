@@ -15,12 +15,13 @@
                 <div class="cta-action-container py-12 my-auto scrollAnimation" data-delay="500"">
                     <div class="cta-action-inner text-white">
                         <h1 class="text-5xl mb-4 text-white">Hilf mit!</h1>
-                        <p class="text-2xl">Damit wir den Kanton Zürich von unserem Anliegen überzeugen können, sind wir auf den Einsatz von Menschen wie dir angewiesen. <b style="color: var(--color10)">Danke, dass du uns unterstützt!</b></p>
+                        <p class="text-xl">Damit wir den Kanton Zürich von unserem Anliegen überzeugen können, sind wir auf den Einsatz von Menschen wie dir angewiesen. <b style="color: var(--color10)">Danke, dass du uns unterstützt!</b></p>
                     </div>
                     <div class="cta-buttons-container mt-8 flex flex-col gap-2">
                         <a href="/komitee#beitreten" class="sra-button">Komitee beitreten</a>
                         <a href="#" data-action="newsletter" class="sra-button sra-button-ter">Newsletter abonnieren</a>
-                        <a href="/spenden" class="sra-button">Spenden</a>
+                        <a href="/testimonial" class="sra-button">Testimonial abgeben</a>
+                        <a href="/spenden" class="sra-button sra-button-ter">Spenden</a>
                     </div>
                     <div class="cta-newsletter-container" hidden>
                         <form id="newsletter-form" class="mt-4">
