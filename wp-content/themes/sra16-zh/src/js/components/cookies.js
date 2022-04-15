@@ -9,9 +9,10 @@ glowCookies.start("en", {
       content: "_paq.push(['rememberConsentGiven']);",
     },
   ],
+  facebookPixel: "510581613773365",
   policyLink: "/datenschutz",
   bannerDescription:
-    "Um unsere Kampagne zu optimieren, setzen wir auf unserer Webseite Cookies ein. Mit deinem Einverständnis hilft du uns, eine effiziente Kampagne durchzuführen.",
+    "Um unsere Kampagne zu optimieren, setzen wir auf unserer Webseite Cookies, unter anderem von Drittparteien wie Facebook ein. Mit deinem Einverständnis hilft du uns, eine effiziente Kampagne durchzuführen.",
   bannerLinkText: "Mehr erfahren",
   bannerBackground: "#ffffff",
   bannerColor: "#232323",
