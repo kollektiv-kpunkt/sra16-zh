@@ -1,6 +1,6 @@
 glowCookies.start("en", {
   hideAfterClick: true,
-  policyVersion: 1,
+  policyVersion: 2,
   border: "none",
   customScript: [
     {
