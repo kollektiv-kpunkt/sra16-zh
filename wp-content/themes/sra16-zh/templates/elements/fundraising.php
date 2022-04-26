@@ -99,8 +99,8 @@ $percentage = round(($sum - $milestones[$currentId - 1]["value"]) / ($milestones
         if ($milestone["id"] == $currentId): ?>
             <div id="sra-fundraising-counter-container" class="mt-8 mb-4" style="--goal: <?= $percentage ?>%">
                 <div id="sra-fundraising-counter-upper" class="flex justify-between">
-                    <div class="sra-fundraising-counter-number text-sm text-neutral-500" id="sra-fundraising-counter-start"><?= number_format($milestones[$currentId-1]["value"], 0,"","'") ?> CHF</div>
-                    <div class="sra-fundraising-counter-number text-sm text-neutral-500" id="sra-fundraising-counter-goal"><?= number_format($milestone["value"], 0,"","'") ?> CHF</div>
+                    <div class="sra-fundraising-counter-number text-sm text-neutral-500" id="sra-fundraising-counter-start">CHF <?= number_format($milestones[$currentId-1]["value"], 0,"","'") ?></div>
+                    <div class="sra-fundraising-counter-number text-sm text-neutral-500" id="sra-fundraising-counter-goal">CHF <?= number_format($milestone["value"], 0,"","'") ?></div>
                 </div>
                 <div id="sra-fundraising-counter-lower" class="mt-2">
                     <div id="sra-fundraising-bar-outer" class="flex">
@@ -113,7 +113,7 @@ $percentage = round(($sum - $milestones[$currentId - 1]["value"]) / ($milestones
         endif;
         ?>
         <div class="sra-fundraising-milestone-wrapper px-4 mb-4<?= ($milestone["id"] == $currentId) ? " current-milestone" : "" ?><?= ($milestone["reached"]) ? " milestone-reached" : "" ?>">
-            <p class="text-xl leading-none sra-fundraising-milestone"><b><?= number_format($milestone["value"], 0,"","'") ?> CHF:</b> <?= $milestone["title"] ?></p>
+            <p class="text-xl leading-none sra-fundraising-milestone"><b>CHF <?= number_format($milestone["value"], 0,"","'") ?>:</b> <?= $milestone["title"] ?></p>
             <span class="sra-fundraising-milestone-tag text-xs leading-none p-1"><?= ($milestone["reached"]) ? "Meilenstein erreicht!" : "" ?><?= ($milestone["id"] == $currentId) ? "Aktueller Meilenstein!" : "" ?></span>
         </div>
         <?php
