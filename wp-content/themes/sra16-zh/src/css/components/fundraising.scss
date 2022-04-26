@@ -1,0 +1,125 @@
+#sra-fundraising-bar-outer, #sra-fundraising-bar-inner {
+    border-radius: 5rem;
+}
+
+#sra-fundraising-bar-outer {
+    position: relative;
+    padding: 0.25rem;
+    background-color: lightgray;
+}
+
+#sra-fundraising-bar-inner {
+    height: 1rem;
+    background-color: var(--color60);
+    width: 0%;
+    animation: setBar 500ms ease 500ms forwards;
+}
+
+body.ds-5 #sra-fundraising-bar-inner {
+    background-color: var(--color10);
+}
+
+@keyframes setBar {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--goal);
+    }
+}
+
+#sra-fundraising-bar-percentage {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0.25rem;
+    transform: translateY(0.075rem);
+}
+
+#sra-fundraising-bar-percentage.percentage-left {
+    position: absolute;
+    margin-left: 0;
+    left: 0;
+    top: 0.37rem;
+    transform: translateY(0.075rem) translateX(0);
+    opacity: 0;
+    color: var(--color10);
+    animation: setPercentage 500ms ease 500ms forwards;
+}
+
+@keyframes setPercentage {
+    from {
+        left: 0;
+        transform: translateY(0.075rem) translateX(0);
+        opacity: 0;
+    }
+
+    to {
+        left: calc(var(--goal) / 2);
+        transform: translateY(0.075rem) translateX(-50%);
+        opacity: 1;
+    }
+}
+
+// Milestones
+.sra-fundraising-milestone-wrapper {
+    display: flex;
+    border: 2px solid var(--milestoneBorder);
+    color: var(--milestoneColor);
+    background-color: var(--milestoneBackground);
+    position: relative;
+
+    padding-top: 0.75rem;
+    padding-bottom: 0.65rem;
+
+    --milestoneBorder: #7B7B7B;
+    --milestoneColor: #C9C9C9;
+    --milestoneBackground: transparent;
+}
+
+.sra-fundraising-milestone-wrapper.milestone-reached {
+    --milestoneBorder: var(--color30);
+    --milestoneColor: white;
+    --milestoneBackground: var(--color60);
+    --tagBackground: var(--color10);
+    --tagColor: var(--color60);
+}
+
+.sra-fundraising-milestone-wrapper.milestone-reached p {
+    text-decoration: line-through;
+}
+
+.sra-fundraising-milestone-wrapper.current-milestone {
+    --milestoneBorder: var(--color30);
+    --milestoneColor: var(--color60);
+    --milestoneBackground: transparent;
+    --tagBackground:var(--color60);
+    --tagColor: var(--color10);
+}
+
+.sra-fundraising-milestone-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    background-color: var(--tagBackground);
+    color: var(--tagColor);
+}
+
+// Corrections
+
+body.ds-2 .sra-fundraising-milestone-wrapper.current-milestone {
+    --tagColor: white;
+}
+
+body.ds-2 #sra-fundraising-bar-percentage.percentage-left {
+    color: white;
+}
+
+body.ds-5 .sra-fundraising-milestone-wrapper.current-milestone {
+    --milestoneBackground: var(--color30);
+    --milestoneColor: white;
+}
+
+body.ds-5 #sra-fundraising-bar-percentage.percentage-left {
+    color: white;
+}
