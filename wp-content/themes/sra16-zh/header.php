@@ -3,7 +3,7 @@ $bodyclasses = [];
 if (is_front_page()) {
     $design_system = "ds-1";
 } else {
-    $design_system = "ds-" . rand(1,5);
+    $design_system = "ds-" . rand(1,4);
 }
 
 global $template;
