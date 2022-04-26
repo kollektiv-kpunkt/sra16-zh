@@ -69,6 +69,7 @@ foreach ($milestones as $milestone) {
 $currentId = array_values(array_filter($milestones, function($milestone) {
     return $milestone['reached'] == false;
 }))[0]["id"];
+var_dump($currentId);
 
 if ($currentId > 0) {
     $percentage = round(($sum - $milestones[$currentId - 1]["value"]) / ($milestones[$currentId]["value"] - $milestones[$currentId - 1]["value"]) * 100, 2);
