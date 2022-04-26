@@ -61,7 +61,7 @@ $milestones = [
     ],
     [
         "id" => 4,
-        "title" => "Die 17 SVP-stärksten Gemeinden beflyern",
+        "title" => "17 der konservativsten Gemeinden in Zürich beflyern",
         "value" => "2000"
     ],
     [
