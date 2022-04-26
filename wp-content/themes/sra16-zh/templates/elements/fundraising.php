@@ -21,22 +21,21 @@ if($transactions) {
 
 
 $sum = $sum / 100;
-$sum += 360;
 
 
 
-if ($sum > 7500) {
-    $sum = 7500;
-}
-if ($sum > 5000) {
-    $goal = 7500;
-} else if ($sum > 3000) {
-    $goal = 5000;
-} else if ($sum > 1000) {
-    $goal = 3000;
-} else {
-    $goal = 1500;
-}
+// if ($sum > 7500) {
+//     $sum = 7500;
+// }
+// if ($sum > 5000) {
+//     $goal = 7500;
+// } else if ($sum > 3000) {
+//     $goal = 5000;
+// } else if ($sum > 1000) {
+//     $goal = 3000;
+// } else {
+//     $goal = 1500;
+// }
 
 $milestones = [
     [
