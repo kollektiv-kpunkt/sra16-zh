@@ -2,7 +2,7 @@
 // https://api.raisenow.com/epayment/api/berpa-5734/transactions/search?sort[0][field_name]=created&sort[0][order]=desc&filters[0][field_name]=stored_campaign_name&filters[0][type]=fulltext&filters[0][value]=Allgemeines%20Spendenformular&filters[1][field_name]=last_status&filters[1][type]=term&filters[1][value]=final_success
 // Make PHP Curl Get Request
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "https://api.raisenow.com/epayment/api/berpa-5734/transactions/search?sort[0][field_name]=created&sort[0][order]=desc&filters[0][field_name]=stored_campaign_name&filters[0][type]=fulltext&filters[0][value]=fundraising_form[1][field_name]=last_status&filters[1][type]=term&filters[1][value]=final_success");
+curl_setopt($ch, CURLOPT_URL, "https://api.raisenow.com/epayment/api/berpa-5734/transactions/search?sort[0][field_name]=created&sort[0][order]=desc&filters[0][field_name]=stored_campaign_name&filters[0][type]=fulltext&filters[0][value]=fundraising_form&filters[1][field_name]=last_status&filters[1][type]=term&filters[1][value]=final_success");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
 curl_setopt($ch, CURLOPT_USERPWD, $_ENV["RNWAPIUSER"] . ":" . $_ENV["RNWAPIPW"]);
