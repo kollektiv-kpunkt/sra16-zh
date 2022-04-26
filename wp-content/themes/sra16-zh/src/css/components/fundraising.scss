@@ -76,6 +76,10 @@ body.ds-5 #sra-fundraising-bar-inner {
     --milestoneBackground: transparent;
 }
 
+.sra-fundraising-milestone-wrapper p {
+    max-width: 80%;
+}
+
 .sra-fundraising-milestone-wrapper.milestone-reached {
     --milestoneBorder: var(--color30);
     --milestoneColor: white;
@@ -122,4 +126,33 @@ body.ds-5 .sra-fundraising-milestone-wrapper.current-milestone {
 
 body.ds-5 #sra-fundraising-bar-percentage.percentage-left {
     color: white;
+}
+
+@media screen and (max-width: 798px) {
+    .sra-fundraising-milestone-wrapper {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .sra-fundraising-milestone-wrapper p {
+        width: 100%;
+        padding-top: 1rem;
+        padding-bottom: 0.85rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .sra-fundraising-milestone-tag {
+        display: none;
+    }
+
+    .sra-fundraising-milestone-wrapper.current-milestone .sra-fundraising-milestone-tag, .sra-fundraising-milestone-wrapper.milestone-reached .sra-fundraising-milestone-tag {
+        position: relative;
+        font-size: 1rem;
+        text-align: center;
+        display: block;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
 }
