@@ -23,20 +23,6 @@ if($transactions) {
 $sum = $sum / 100;
 
 
-
-// if ($sum > 7500) {
-//     $sum = 7500;
-// }
-// if ($sum > 5000) {
-//     $goal = 7500;
-// } else if ($sum > 3000) {
-//     $goal = 5000;
-// } else if ($sum > 1000) {
-//     $goal = 3000;
-// } else {
-//     $goal = 1500;
-// }
-
 $milestones = [
     [
         "id" => 0,
@@ -84,7 +70,13 @@ $currentId = array_values(array_filter($milestones, function($milestone) {
     return $milestone['reached'] == false;
 }))[0]["id"];
 
-$percentage = round(($sum - $milestones[$currentId - 1]["value"]) / ($milestones[$currentId]["value"] - $milestones[$currentId - 1]["value"]) * 100, 2);
+if ($currentId > 0) {
+    $percentage = round(($sum - $milestones[$currentId - 1]["value"]) / ($milestones[$currentId]["value"] - $milestones[$currentId - 1]["value"]) * 100, 2);
+    $oldgoal = $milestones[$currentId - 1]["value"];
+} else {
+    $percentage = round(($sum) / ($milestones[$currentId]["value"]) * 100, 2);
+    $oldgoal = 0;
+}
 ?>
 
 
@@ -98,7 +90,7 @@ $percentage = round(($sum - $milestones[$currentId - 1]["value"]) / ($milestones
         if ($milestone["id"] == $currentId): ?>
             <div id="sra-fundraising-counter-container" class="mt-8 mb-4" style="--goal: <?= $percentage ?>%">
                 <div id="sra-fundraising-counter-upper" class="flex justify-between">
-                    <div class="sra-fundraising-counter-number text-sm text-neutral-500" id="sra-fundraising-counter-start">CHF <?= number_format($milestones[$currentId-1]["value"], 0,"","'") ?></div>
+                    <div class="sra-fundraising-counter-number text-sm text-neutral-500" id="sra-fundraising-counter-start">CHF <?= number_format($oldgoal, 0,"","'") ?></div>
                     <div class="sra-fundraising-counter-number text-sm text-neutral-500" id="sra-fundraising-counter-goal">CHF <?= number_format($milestone["value"], 0,"","'") ?></div>
                 </div>
                 <div id="sra-fundraising-counter-lower" class="mt-2">
