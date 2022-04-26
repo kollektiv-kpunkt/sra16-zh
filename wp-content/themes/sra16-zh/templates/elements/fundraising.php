@@ -41,7 +41,7 @@ if ($sum > 5000) {
 $milestones = [
     [
         "id" => 0,
-        "title" => "700 sticker drucken und verschenken",
+        "title" => "700 Sticker drucken und verschenken",
         "value" => "100"
     ],
     [
@@ -66,7 +66,7 @@ $milestones = [
     ],
     [
         "id" => 5,
-        "title" => "Inserat im 20 Minuten",
+        "title" => "Inserat im «20 Minuten»",
         "value" => "4670"
     ],
 ];
