@@ -7,7 +7,7 @@
     </li>
 
     <li class="navbar-item buttons flex gap-4">
-        <a href="/spenden" class="navbar-link text-xl sra-button sra-button-sec">Spenden</a>
+        <a href="/crowdfunding" class="navbar-link text-xl sra-button sra-button-sec">Spenden</a>
         <a href="/#mitmachen" class="navbar-link text-xl sra-button">Mithelfen</a>
     </li>
 </ul>
