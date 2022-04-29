@@ -19,7 +19,7 @@ if (document.querySelector("#sra-mobi-buttons button")) {
         `#sra-mobimessage #sra-msg-${lang}`
       ).innerHTML;
       text = text.replace(/<p>(.*)<\/p>/g, "$1");
-      console.log(text);
+      _paq.push(["trackEvent", "Schlussmobi", type, text]);
       let url = document
         .querySelector("#sra-mobimessage")
         .getAttribute("data-mobi-url");
