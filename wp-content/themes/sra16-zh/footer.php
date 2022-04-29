@@ -27,6 +27,18 @@ if (isset($_ENV["MATOMOID"]) && $_ENV["MATOMOID"] != ""):
 endif;
 ?>
 
+<?php
+if ($_ENV["DEV"] == 1):
+    ?>
+    <script src="http://localhost:35729/livereload.js"></script>
+<?php
+endif;
+global $showPopup;
+if (isset($showPopup)):
+    get_template_part( "templates/partials/popup" );
+endif;
+?>
+
 
 <?php
 wp_footer();

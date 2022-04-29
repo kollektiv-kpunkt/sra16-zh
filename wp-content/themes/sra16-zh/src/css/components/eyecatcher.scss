@@ -1,0 +1,27 @@
+#sra-eyecatcher-wrapper #sra-popup-countdown {
+    margin-top: 0;
+    margin-bottom: 0;
+    --baseSize: 0.5rem
+}
+#sra-eyecatcher-wrapper #sra-popup-countdown .sra-countdown-digit {
+    border: none;
+}
+
+#sra-eyecatcher-wrapper {
+    position: fixed;
+    z-index: 1000;
+    bottom: 0;
+    right: 0;
+    padding-top: 0.5rem;
+    background: var(--color60);
+    border-radius: 10px 0 0 0;
+}
+
+#sra-eyecatcher-wrapper h3 {
+    color: var(--color10);
+}
+
+#sra-eyecatcher-wrapper a {
+    color: var(--color30);
+    text-decoration: underline;
+}

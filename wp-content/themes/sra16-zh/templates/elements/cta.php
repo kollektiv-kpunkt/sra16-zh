@@ -19,7 +19,7 @@
                     </div>
                     <div class="cta-buttons-container mt-8 flex flex-col gap-2">
                         <a href="/komitee#beitreten" class="sra-button">Komitee beitreten</a>
-                        <a href="#" data-action="newsletter" class="sra-button sra-button-ter">Newsletter abonnieren</a>
+                        <a href="/schlussmobi" class="sra-button sra-button-ter">Umfeld mobilisieren</a>
                         <a href="/testimonial" class="sra-button">Testimonial abgeben</a>
                         <a href="/spenden" class="sra-button sra-button-ter">Spenden</a>
                     </div>

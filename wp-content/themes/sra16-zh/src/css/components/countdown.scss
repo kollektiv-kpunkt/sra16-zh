@@ -1,0 +1,39 @@
+#sra-popup-countdown {
+    --baseSize: 18px;
+    gap: calc(0.5 * var(--baseSize));
+}
+
+@media screen and (max-width: 590px) {
+    #sra-popup-countdown {
+        --baseSize: 3.5vw;
+    }
+
+}
+
+.sra-countdown-digit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: calc(0.25 * var(--baseSize));
+    background-color: #232323;
+    height: calc(5 * var(--baseSize));
+    width: calc(5 * var(--baseSize));
+    border: calc(0.25 * var(--baseSize)) solid lightgrey;
+    color: white;
+}
+
+span.sra-popup-countdown-unit {
+    font-size: calc(0.6 * var(--baseSize));
+    height: calc(0.6 * 0.7 * var(--baseSize));
+    line-height: 0.7;
+}
+
+span.sra-popup-countdown-number {
+    font-size: calc(2.5 * var(--baseSize));
+    height: calc(2 * var(--baseSize));
+    font-weight: bold;
+    line-height: 0.8;
+    margin-top: calc(0.25 * var(--baseSize));
+    margin-bottom: calc(0.5 * var(--baseSize));
+}

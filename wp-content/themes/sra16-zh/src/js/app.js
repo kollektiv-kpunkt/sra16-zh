@@ -9,3 +9,5 @@ import "./components/cookies.js";
 import "./components/testimonial.js";
 import "./components/textarea.js";
 import "./components/mobi.js";
+import "./components/popup.js";
+import "./components/countdown.js";
