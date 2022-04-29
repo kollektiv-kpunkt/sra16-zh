@@ -1,0 +1,92 @@
+div#sra-mobimessage {
+    width: 100%;
+    resize: none;
+    color: black;
+    padding: 0.75rem;
+    border: 9px solid var(--color60);
+    border-radius: 4px;
+    position: relative;
+}
+
+#sra-mobi-buttons {
+    --columns: 2;
+    --gutter: 0.5rem;
+}
+
+#sra-mobi-buttons .sra-button {
+    width: calc(100% / var(--columns) - (var(--gutter) * (var(--columns) - 1) / var(--columns)));
+}
+
+@media screen and (max-width: 767px) {
+    #sra-mobi-buttons {
+        --columns: 1;
+    }
+}
+
+#sra-mobi-buttons .sra-button::before {
+    font-family: "FontAwesome";
+    margin-right: 0.5rem;
+    transform-origin: center right;
+    display: inline-block;
+    font-weight: 400;
+}
+
+#sra-mobi-buttons .sra-button#sra-mobi-copy::before {
+    content: "\f0c5";
+}
+
+#sra-mobi-buttons .sra-button#sra-mobi-whatsApp {
+    --backgroundcolor: #25D366;
+    --textcolor: white;
+    --bordercolor: #25D366;
+}
+
+#sra-mobi-buttons .sra-button#sra-mobi-whatsApp::before {
+    content: "\f232";
+}
+
+#sra-mobi-buttons .sra-button#sra-mobi-telegram {
+    --backgroundcolor: #0088cc;
+    --textcolor: white;
+    --bordercolor: #0088cc;
+}
+
+#sra-mobi-buttons .sra-button#sra-mobi-telegram::before {
+    content: "\f2c6";
+}
+
+#sra-mobi-buttons .sra-button#sra-mobi-facebook {
+    --backgroundcolor: #3B5998;
+    --textcolor: white;
+    --bordercolor: #3B5998;
+}
+
+#sra-mobi-buttons .sra-button#sra-mobi-facebook::before {
+    content: "\f09a";
+}
+
+#sra-mobi-buttons .sra-button#sra-mobi-twitter {
+    --backgroundcolor: #1DA1F2;
+    --textcolor: white;
+    --bordercolor: #1DA1F2;
+}
+
+#sra-mobi-buttons .sra-button#sra-mobi-twitter::before {
+    content: "\f099";
+}
+
+#sra-mobi-buttons .sra-button#sra-mobi-email::before {
+    content: "\f0e0";
+}
+
+#sra-mobi-changelang {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}

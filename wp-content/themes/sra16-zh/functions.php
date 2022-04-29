@@ -29,11 +29,11 @@ add_action( 'after_setup_theme', 'sra_theme_support' );
 
 /* Element Shortcode */
 function sra_element_shortcode($atts) {
-    $atts = shortcode_atts( array(
+    $args = shortcode_atts( array(
         "elem" => "",
     ), $atts, "sra-element" );
     ob_start();
-    get_template_part("templates/elements/{$atts['elem']}");
+    get_template_part("templates/elements/{$args['elem']}", "", $atts);
     return ob_get_clean();
 }
 
