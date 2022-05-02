@@ -18,10 +18,11 @@ if (!isset($_COOKIE["sra-popup-closed"])) {
     setcookie("sra-popup-closed", "true", time() + 86400, "/");
     global $showPopup;
     $showPopup = true;
-} else if (!isset($_COOKIE["sra-eyecatcher-closed"])) {
-    global $showEyeCatcher;
-    $showEyeCatcher = true;
 }
+// else if (!isset($_COOKIE["sra-eyecatcher-closed"])) {
+//     global $showEyeCatcher;
+//     $showEyeCatcher = true;
+// }
 ?>
 
 <!DOCTYPE html>
