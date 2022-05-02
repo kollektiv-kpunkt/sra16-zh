@@ -15,7 +15,7 @@ if (is_front_page()) {
 }
 array_push($bodyclasses, $design_system);
 if (!isset($_COOKIE["sra-popup-closed"])) {
-    setcookie("sra-popup-closed", "true", time() + 86400, "/");
+    setcookie("sra-popup-closed", "true", time() + 43200, "/");
     global $showPopup;
     $showPopup = true;
 }
