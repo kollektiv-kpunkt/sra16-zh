@@ -19,13 +19,13 @@ if (document.querySelector("#sra-mobi-buttons button")) {
         `#sra-mobimessage #sra-msg-${lang}`
       ).innerHTML;
       text = text.replace(/<p>(.*)<\/p>/g, "$1");
-      text = text.replace(/<strong>(.*)<\/strong>/g, "$1");
       _paq.push(["trackEvent", "Schlussmobi", type, text]);
       let url = document
         .querySelector("#sra-mobimessage")
         .getAttribute("data-mobi-url");
       if (type == "whatsapp") {
         text = text.replace(/<b>(.*)<\/b>/g, "*$1*");
+        text = text.replace(/<strong>(.*)<\/strong>/g, "*$1*");
         window.open(
           `https://api.whatsapp.com/send/?text=${encodeURIComponent(
             text
@@ -39,22 +39,28 @@ if (document.querySelector("#sra-mobi-buttons button")) {
         );
       } else if (type == "twitter") {
         text = text.replace(/<b>(.*)<\/b>/g, "$1");
+        text = text.replace(/<strong>(.*)<\/strong>/g, "$1");
         window.open(
           `https://twitter.com/intent/tweet?text=${encodeURIComponent(
             text
           )}%0A${encodeURIComponent(url)}`
         );
       } else if (type == "email") {
+        text = text.replace(/<b>(.*)<\/b>/g, "$1");
+        text = text.replace(/<strong>(.*)<\/strong>/g, "$1");
         window.open(
           `mailto:?body=${encodeURIComponent(text)}%0A${encodeURIComponent(
             url
           )}`
         );
       } else if (type == "copy") {
+        text = text.replace(/<b>(.*)<\/b>/g, "$1");
+        text = text.replace(/<strong>(.*)<\/strong>/g, "$1");
         navigator.clipboard.writeText(text + "\n" + url);
         notyf.success("Die Nachricht wurde in die Zwischenablage kopiert!");
       } else if (type == "telegram") {
         text = text.replace(/<b>(.*)<\/b>/g, "**$1**");
+        text = text.replace(/<strong>(.*)<\/strong>/g, "**$1**");
         window.open(
           `https://t.me/share/url?url=${encodeURIComponent(
             url
