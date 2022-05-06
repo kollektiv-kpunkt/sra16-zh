@@ -9,7 +9,7 @@ if ($data["stored_customer_email"]) {
     if ($data["stored_customer_firstname"] && $data["stored_customer_firstname"] != "") {
         try {
             $response = $client->lists->setListMember($mclistid, strtolower(md5($data["stored_customer_email"])), [
-                "email_address" => $data["email"],
+                "email_address" => $data["stored_customer_email"],
                 'merge_fields' => [
                         "FNAME" => $data["stored_customer_firstname"],
                         "LNAME" => $data["stored_customer_lastname"]
